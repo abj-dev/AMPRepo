@@ -1,0 +1,853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ApartmentsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ApartmentsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Apartments" EntityType="ApartmentsModel.Apartment" />
+    <EntitySet Name="aspnet_Applications" EntityType="ApartmentsModel.aspnet_Applications" />
+    <EntitySet Name="aspnet_Membership" EntityType="ApartmentsModel.aspnet_Membership" />
+    <EntitySet Name="aspnet_Paths" EntityType="ApartmentsModel.aspnet_Paths" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="ApartmentsModel.aspnet_PersonalizationAllUsers" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="ApartmentsModel.aspnet_PersonalizationPerUser" />
+    <EntitySet Name="aspnet_Profile" EntityType="ApartmentsModel.aspnet_Profile" />
+    <EntitySet Name="aspnet_Roles" EntityType="ApartmentsModel.aspnet_Roles" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="ApartmentsModel.aspnet_SchemaVersions" />
+    <EntitySet Name="aspnet_Users" EntityType="ApartmentsModel.aspnet_Users" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="ApartmentsModel.aspnet_WebEvent_Events" />
+    <EntitySet Name="Complexes" EntityType="ApartmentsModel.Complex" />
+    <EntitySet Name="ParkingWaitlists" EntityType="ApartmentsModel.ParkingWaitlist" />
+    <EntitySet Name="Residents" EntityType="ApartmentsModel.Resident" />
+    <EntitySet Name="Rooms" EntityType="ApartmentsModel.Room" />
+    <EntitySet Name="Tickets" EntityType="ApartmentsModel.Ticket" />
+    <AssociationSet Name="FK_Apartment_Complex" Association="ApartmentsModel.FK_Apartment_Complex">
+      <End Role="Complex" EntitySet="Complexes" />
+      <End Role="Apartment" EntitySet="Apartments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rooms_Apartment" Association="ApartmentsModel.FK_Rooms_Apartment">
+      <End Role="Apartment" EntitySet="Apartments" />
+      <End Role="Rooms" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__Appli__06CD04F7" Association="ApartmentsModel.FK__aspnet_Me__Appli__06CD04F7">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__7D439ABD" Association="ApartmentsModel.FK__aspnet_Pa__Appli__7D439ABD">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__7E37BEF6" Association="ApartmentsModel.FK__aspnet_Ro__Appli__7E37BEF6">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__7F2BE32F" Association="ApartmentsModel.FK__aspnet_Us__Appli__7F2BE32F">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__07C12930" Association="ApartmentsModel.FK__aspnet_Me__UserI__07C12930">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__03F0984C" Association="ApartmentsModel.FK__aspnet_Pe__PathI__03F0984C">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__08B54D69" Association="ApartmentsModel.FK__aspnet_Pe__PathI__08B54D69">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__04E4BC85" Association="ApartmentsModel.FK__aspnet_Pe__UserI__04E4BC85">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__05D8E0BE" Association="ApartmentsModel.FK__aspnet_Pr__UserI__05D8E0BE">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Residents_aspnet_Users" Association="ApartmentsModel.FK_Residents_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Residents" EntitySet="Residents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParkingWaitlist_Residents" Association="ApartmentsModel.FK_ParkingWaitlist_Residents">
+      <End Role="Residents" EntitySet="Residents" />
+      <End Role="ParkingWaitlist" EntitySet="ParkingWaitlists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Residents_Rooms" Association="ApartmentsModel.FK_Residents_Rooms">
+      <End Role="Rooms" EntitySet="Rooms" />
+      <End Role="Residents" EntitySet="Residents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tickets_Residents" Association="ApartmentsModel.FK_Tickets_Residents">
+      <End Role="Residents" EntitySet="Residents" />
+      <End Role="Tickets" EntitySet="Tickets" />
+    </AssociationSet>
+    <AssociationSet Name="aspnet_UsersInRoles" Association="ApartmentsModel.aspnet_UsersInRoles">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <EntitySet Name="AccessCards" EntityType="ApartmentsModel.AccessCard" />
+    <EntitySet Name="Inventories" EntityType="ApartmentsModel.Inventory" />
+    <EntitySet Name="ParkingPasses" EntityType="ApartmentsModel.ParkingPass" />
+    <EntitySet Name="Resident1" EntityType="ApartmentsModel.Resident1" />
+    <EntitySet Name="Room1" EntityType="ApartmentsModel.Room1" />
+    <EntitySet Name="Ticket1" EntityType="ApartmentsModel.Ticket1" />
+    <EntitySet Name="Vendors" EntityType="ApartmentsModel.Vendor" />
+    <EntitySet Name="WaitLists" EntityType="ApartmentsModel.WaitList" />
+    <AssociationSet Name="FK_AccessCard_Apartment" Association="ApartmentsModel.FK_AccessCard_Apartment">
+      <End Role="Apartment" EntitySet="Apartments" />
+      <End Role="AccessCard" EntitySet="AccessCards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccessCard_Resident" Association="ApartmentsModel.FK_AccessCard_Resident">
+      <End Role="Resident1" EntitySet="Resident1" />
+      <End Role="AccessCard" EntitySet="AccessCards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Apartment_Complex1" Association="ApartmentsModel.FK_Apartment_Complex1">
+      <End Role="Complex" EntitySet="Complexes" />
+      <End Role="Apartment" EntitySet="Apartments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParkingPass_Apartment" Association="ApartmentsModel.FK_ParkingPass_Apartment">
+      <End Role="Apartment" EntitySet="Apartments" />
+      <End Role="ParkingPass" EntitySet="ParkingPasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resident_Apartment" Association="ApartmentsModel.FK_Resident_Apartment">
+      <End Role="Apartment" EntitySet="Apartments" />
+      <End Role="Resident1" EntitySet="Resident1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Room_Apartment" Association="ApartmentsModel.FK_Room_Apartment">
+      <End Role="Apartment" EntitySet="Apartments" />
+      <End Role="Room1" EntitySet="Room1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resident_aspnet_Users" Association="ApartmentsModel.FK_Resident_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Resident1" EntitySet="Resident1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_aspnet_Users" Association="ApartmentsModel.FK_Ticket_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Ticket1" EntitySet="Ticket1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_Inventory" Association="ApartmentsModel.FK_Inventory_Inventory">
+      <End Role="Vendor" EntitySet="Vendors" />
+      <End Role="Inventory" EntitySet="Inventories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParkingPass_Resident" Association="ApartmentsModel.FK_ParkingPass_Resident">
+      <End Role="Resident1" EntitySet="Resident1" />
+      <End Role="ParkingPass" EntitySet="ParkingPasses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaitList_ParkingPass" Association="ApartmentsModel.FK_WaitList_ParkingPass">
+      <End Role="ParkingPass" EntitySet="ParkingPasses" />
+      <End Role="WaitList" EntitySet="WaitLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resident_Room" Association="ApartmentsModel.FK_Resident_Room">
+      <End Role="Room1" EntitySet="Room1" />
+      <End Role="Resident1" EntitySet="Resident1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ticket_Resident" Association="ApartmentsModel.FK_Ticket_Resident">
+      <End Role="Resident1" EntitySet="Resident1" />
+      <End Role="Ticket1" EntitySet="Ticket1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaitList_Resident" Association="ApartmentsModel.FK_WaitList_Resident">
+      <End Role="Resident1" EntitySet="Resident1" />
+      <End Role="WaitList" EntitySet="WaitLists" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Apartment">
+    <Key>
+      <PropertyRef Name="ApartmentID" />
+      <PropertyRef Name="A_ID" />
+    </Key>
+    <Property Name="ApartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComplexID" Type="Int32" Nullable="false" />
+    <Property Name="BuildingNo" Type="Int32" />
+    <Property Name="Occupants" Type="Int32" />
+    <NavigationProperty Name="Complex" Relationship="ApartmentsModel.FK_Apartment_Complex" FromRole="Apartment" ToRole="Complex" />
+    <NavigationProperty Name="Rooms" Relationship="ApartmentsModel.FK_Rooms_Apartment" FromRole="Apartment" ToRole="Rooms" />
+    <Property Type="Int32" Name="A_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Complex_ID" Nullable="false" />
+    <Property Type="Int32" Name="Apartment_No" />
+    <Property Type="Int32" Name="Unit_No" />
+    <Property Type="Int32" Name="No_Residents" />
+    <Property Type="String" Name="Services" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AccessCards" Relationship="ApartmentsModel.FK_AccessCard_Apartment" FromRole="Apartment" ToRole="AccessCard" />
+    <NavigationProperty Name="Complex_1" Relationship="ApartmentsModel.FK_Apartment_Complex1" FromRole="Apartment" ToRole="Complex" />
+    <NavigationProperty Name="ParkingPasses" Relationship="ApartmentsModel.FK_ParkingPass_Apartment" FromRole="Apartment" ToRole="ParkingPass" />
+    <NavigationProperty Name="Residents" Relationship="ApartmentsModel.FK_Resident_Apartment" FromRole="Apartment" ToRole="Resident1" />
+    <NavigationProperty Name="Rooms_1" Relationship="ApartmentsModel.FK_Room_Apartment" FromRole="Apartment" ToRole="Room1" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="ApartmentsModel.FK__aspnet_Me__Appli__06CD04F7" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="ApartmentsModel.FK__aspnet_Pa__Appli__7D439ABD" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="ApartmentsModel.FK__aspnet_Ro__Appli__7E37BEF6" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ApartmentsModel.FK__aspnet_Us__Appli__7F2BE32F" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="ApartmentsModel.FK__aspnet_Me__Appli__06CD04F7" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ApartmentsModel.FK__aspnet_Me__UserI__07C12930" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="ApartmentsModel.FK__aspnet_Pa__Appli__7D439ABD" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="ApartmentsModel.FK__aspnet_Pe__PathI__03F0984C" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="ApartmentsModel.FK__aspnet_Pe__PathI__08B54D69" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="ApartmentsModel.FK__aspnet_Pe__PathI__08B54D69" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="ApartmentsModel.FK__aspnet_Pe__PathI__03F0984C" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ApartmentsModel.FK__aspnet_Pe__UserI__04E4BC85" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ApartmentsModel.FK__aspnet_Pr__UserI__05D8E0BE" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="ApartmentsModel.FK__aspnet_Ro__Appli__7E37BEF6" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ApartmentsModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="ApartmentsModel.FK__aspnet_Us__Appli__7F2BE32F" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="ApartmentsModel.FK__aspnet_Me__UserI__07C12930" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="ApartmentsModel.FK__aspnet_Pe__UserI__04E4BC85" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_Profile" Relationship="ApartmentsModel.FK__aspnet_Pr__UserI__05D8E0BE" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+    <NavigationProperty Name="Resident" Relationship="ApartmentsModel.FK_Residents_aspnet_Users" FromRole="aspnet_Users" ToRole="Residents" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="ApartmentsModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="Residents" Relationship="ApartmentsModel.FK_Resident_aspnet_Users" FromRole="aspnet_Users" ToRole="Resident1" />
+    <NavigationProperty Name="Tickets" Relationship="ApartmentsModel.FK_Ticket_aspnet_Users" FromRole="aspnet_Users" ToRole="Ticket1" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
+    <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" />
+    <Property Name="EventTime" Type="DateTime" Nullable="false" />
+    <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventCode" Type="Int32" Nullable="false" />
+    <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="RequestUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="ExceptionType" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="Details" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Complex">
+    <Key>
+      <PropertyRef Name="ComplexID" />
+      <PropertyRef Name="C_ID" />
+    </Key>
+    <Property Name="ComplexID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComplexName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Apartments" Relationship="ApartmentsModel.FK_Apartment_Complex" FromRole="Complex" ToRole="Apartment" />
+    <Property Type="Int32" Name="C_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Maintenance" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Hotline" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Apartments_1" Relationship="ApartmentsModel.FK_Apartment_Complex1" FromRole="Complex" ToRole="Apartment" />
+  </EntityType>
+  <EntityType Name="ParkingWaitlist">
+    <Key>
+      <PropertyRef Name="WaitlistID" />
+    </Key>
+    <Property Name="WaitlistID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsedID" Type="Guid" />
+    <NavigationProperty Name="Resident" Relationship="ApartmentsModel.FK_ParkingWaitlist_Residents" FromRole="ParkingWaitlist" ToRole="Residents" />
+  </EntityType>
+  <EntityType Name="Resident">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Guid" Nullable="false" />
+    <Property Name="RoomID" Type="Int32" />
+    <Property Name="MoveInDate" Type="DateTime" />
+    <Property Name="MoveOutDate" Type="DateTime" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ApartmentsModel.FK_Residents_aspnet_Users" FromRole="Residents" ToRole="aspnet_Users" />
+    <NavigationProperty Name="ParkingWaitlists" Relationship="ApartmentsModel.FK_ParkingWaitlist_Residents" FromRole="Residents" ToRole="ParkingWaitlist" />
+    <NavigationProperty Name="Room" Relationship="ApartmentsModel.FK_Residents_Rooms" FromRole="Residents" ToRole="Rooms" />
+    <NavigationProperty Name="Tickets" Relationship="ApartmentsModel.FK_Tickets_Residents" FromRole="Residents" ToRole="Tickets" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomID" />
+    </Key>
+    <Property Name="RoomID" Type="Int32" Nullable="false" />
+    <Property Name="ApartmentID" Type="Int32" Nullable="false" />
+    <Property Name="RoomType" Type="Int32" />
+    <NavigationProperty Name="Apartment" Relationship="ApartmentsModel.FK_Rooms_Apartment" FromRole="Rooms" ToRole="Apartment" />
+    <NavigationProperty Name="Residents" Relationship="ApartmentsModel.FK_Residents_Rooms" FromRole="Rooms" ToRole="Residents" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="TicketID" />
+    </Key>
+    <Property Name="TicketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Guid" />
+    <Property Name="Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DateSubmit" Type="DateTime" />
+    <Property Name="DateClosed" Type="DateTime" />
+    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Handler" Type="Guid" />
+    <NavigationProperty Name="Resident" Relationship="ApartmentsModel.FK_Tickets_Residents" FromRole="Tickets" ToRole="Residents" />
+  </EntityType>
+  <Association Name="FK_Apartment_Complex">
+    <End Role="Complex" Type="ApartmentsModel.Complex" Multiplicity="1" />
+    <End Role="Apartment" Type="ApartmentsModel.Apartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Complex">
+        <PropertyRef Name="ComplexID" />
+      </Principal>
+      <Dependent Role="Apartment">
+        <PropertyRef Name="ComplexID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rooms_Apartment">
+    <End Role="Apartment" Type="ApartmentsModel.Apartment" Multiplicity="1" />
+    <End Role="Rooms" Type="ApartmentsModel.Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apartment">
+        <PropertyRef Name="ApartmentID" />
+      </Principal>
+      <Dependent Role="Rooms">
+        <PropertyRef Name="ApartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__Appli__06CD04F7">
+    <End Role="aspnet_Applications" Type="ApartmentsModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="ApartmentsModel.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__7D439ABD">
+    <End Role="aspnet_Applications" Type="ApartmentsModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="ApartmentsModel.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__7E37BEF6">
+    <End Role="aspnet_Applications" Type="ApartmentsModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="ApartmentsModel.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__7F2BE32F">
+    <End Role="aspnet_Applications" Type="ApartmentsModel.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="ApartmentsModel.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__07C12930">
+    <End Role="aspnet_Users" Type="ApartmentsModel.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="ApartmentsModel.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__03F0984C">
+    <End Role="aspnet_Paths" Type="ApartmentsModel.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="ApartmentsModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__08B54D69">
+    <End Role="aspnet_Paths" Type="ApartmentsModel.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="ApartmentsModel.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__04E4BC85">
+    <End Role="aspnet_Users" Type="ApartmentsModel.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="ApartmentsModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__05D8E0BE">
+    <End Role="aspnet_Users" Type="ApartmentsModel.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="ApartmentsModel.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Residents_aspnet_Users">
+    <End Role="aspnet_Users" Type="ApartmentsModel.aspnet_Users" Multiplicity="1" />
+    <End Role="Residents" Type="ApartmentsModel.Resident" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Residents">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParkingWaitlist_Residents">
+    <End Role="Residents" Type="ApartmentsModel.Resident" Multiplicity="0..1" />
+    <End Role="ParkingWaitlist" Type="ApartmentsModel.ParkingWaitlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Residents">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ParkingWaitlist">
+        <PropertyRef Name="UsedID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Residents_Rooms">
+    <End Role="Rooms" Type="ApartmentsModel.Room" Multiplicity="0..1" />
+    <End Role="Residents" Type="ApartmentsModel.Resident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rooms">
+        <PropertyRef Name="RoomID" />
+      </Principal>
+      <Dependent Role="Residents">
+        <PropertyRef Name="RoomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tickets_Residents">
+    <End Role="Residents" Type="ApartmentsModel.Resident" Multiplicity="0..1" />
+    <End Role="Tickets" Type="ApartmentsModel.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Residents">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Tickets">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="aspnet_UsersInRoles">
+    <End Role="aspnet_Roles" Type="ApartmentsModel.aspnet_Roles" Multiplicity="*" />
+    <End Role="aspnet_Users" Type="ApartmentsModel.aspnet_Users" Multiplicity="*" />
+  </Association>
+  <EntityType Name="AccessCard">
+    <Key>
+      <PropertyRef Name="AC_ID" />
+    </Key>
+    <Property Type="Int32" Name="AC_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Apartment_ID" Nullable="false" />
+    <Property Type="Int32" Name="Resident_ID" />
+    <Property Type="Int32" Name="AccessCard_No" Nullable="false" />
+    <Property Type="Boolean" Name="Issued" Nullable="false" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Apartment" Relationship="ApartmentsModel.FK_AccessCard_Apartment" FromRole="AccessCard" ToRole="Apartment" />
+    <NavigationProperty Name="Resident" Relationship="ApartmentsModel.FK_AccessCard_Resident" FromRole="AccessCard" ToRole="Resident1" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="I_ID" />
+    </Key>
+    <Property Type="Int32" Name="I_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Vendor_ID" Nullable="false" />
+    <Property Type="String" Name="Category" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Item" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Quantity" Nullable="false" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Vendor" Relationship="ApartmentsModel.FK_Inventory_Inventory" FromRole="Inventory" ToRole="Vendor" />
+  </EntityType>
+  <EntityType Name="ParkingPass">
+    <Key>
+      <PropertyRef Name="PP_ID" />
+    </Key>
+    <Property Type="Int32" Name="PP_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Apartment_ID" Nullable="false" />
+    <Property Type="Int32" Name="Resident_ID" />
+    <Property Type="Int32" Name="Tag_No" />
+    <Property Type="Boolean" Name="Issued" Nullable="false" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Apartment" Relationship="ApartmentsModel.FK_ParkingPass_Apartment" FromRole="ParkingPass" ToRole="Apartment" />
+    <NavigationProperty Name="Resident" Relationship="ApartmentsModel.FK_ParkingPass_Resident" FromRole="ParkingPass" ToRole="Resident1" />
+    <NavigationProperty Name="WaitLists" Relationship="ApartmentsModel.FK_WaitList_ParkingPass" FromRole="ParkingPass" ToRole="WaitList" />
+  </EntityType>
+  <EntityType Name="Resident1">
+    <Key>
+      <PropertyRef Name="R_ID" />
+    </Key>
+    <Property Type="Int32" Name="R_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="U_ID" Nullable="false" />
+    <Property Type="Int32" Name="Apartment_ID" Nullable="false" />
+    <Property Type="Int32" Name="Room_ID" Nullable="false" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="MoveInDate" />
+    <Property Type="DateTime" Name="MoveOutDate" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AccessCards" Relationship="ApartmentsModel.FK_AccessCard_Resident" FromRole="Resident1" ToRole="AccessCard" />
+    <NavigationProperty Name="Apartment" Relationship="ApartmentsModel.FK_Resident_Apartment" FromRole="Resident1" ToRole="Apartment" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ApartmentsModel.FK_Resident_aspnet_Users" FromRole="Resident1" ToRole="aspnet_Users" />
+    <NavigationProperty Name="ParkingPasses" Relationship="ApartmentsModel.FK_ParkingPass_Resident" FromRole="Resident1" ToRole="ParkingPass" />
+    <NavigationProperty Name="Room" Relationship="ApartmentsModel.FK_Resident_Room" FromRole="Resident1" ToRole="Room1" />
+    <NavigationProperty Name="Tickets" Relationship="ApartmentsModel.FK_Ticket_Resident" FromRole="Resident1" ToRole="Ticket1" />
+    <NavigationProperty Name="WaitLists" Relationship="ApartmentsModel.FK_WaitList_Resident" FromRole="Resident1" ToRole="WaitList" />
+  </EntityType>
+  <EntityType Name="Room1">
+    <Key>
+      <PropertyRef Name="RM_ID" />
+    </Key>
+    <Property Type="Int32" Name="RM_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Apartment_ID" Nullable="false" />
+    <Property Type="Int32" Name="Room_No" Nullable="false" />
+    <Property Type="String" Name="Resident_A" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Resident_B" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Apartment" Relationship="ApartmentsModel.FK_Room_Apartment" FromRole="Room1" ToRole="Apartment" />
+    <NavigationProperty Name="Residents" Relationship="ApartmentsModel.FK_Resident_Room" FromRole="Room1" ToRole="Resident1" />
+  </EntityType>
+  <EntityType Name="Ticket1">
+    <Key>
+      <PropertyRef Name="T_ID" />
+    </Key>
+    <Property Type="Int32" Name="T_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Resident_ID" Nullable="false" />
+    <Property Type="Guid" Name="Handler_ID" Nullable="false" />
+    <Property Type="String" Name="Category" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Issue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Replies" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Updates" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Opened" />
+    <Property Type="DateTime" Name="Closed" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ApartmentsModel.FK_Ticket_aspnet_Users" FromRole="Ticket1" ToRole="aspnet_Users" />
+    <NavigationProperty Name="Resident" Relationship="ApartmentsModel.FK_Ticket_Resident" FromRole="Ticket1" ToRole="Resident1" />
+  </EntityType>
+  <EntityType Name="Vendor">
+    <Key>
+      <PropertyRef Name="V_ID" />
+    </Key>
+    <Property Type="Int32" Name="V_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Inventories" Relationship="ApartmentsModel.FK_Inventory_Inventory" FromRole="Vendor" ToRole="Inventory" />
+  </EntityType>
+  <EntityType Name="WaitList">
+    <Key>
+      <PropertyRef Name="WL_ID" />
+    </Key>
+    <Property Type="Int32" Name="WL_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Resident_ID" Nullable="false" />
+    <Property Type="DateTime" Name="Application_Date" Nullable="false" />
+    <Property Type="Boolean" Name="ParkingPass_Issued" Nullable="false" />
+    <Property Type="Int32" Name="ParkingPass_ID" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ParkingPass" Relationship="ApartmentsModel.FK_WaitList_ParkingPass" FromRole="WaitList" ToRole="ParkingPass" />
+    <NavigationProperty Name="Resident" Relationship="ApartmentsModel.FK_WaitList_Resident" FromRole="WaitList" ToRole="Resident1" />
+  </EntityType>
+  <Association Name="FK_AccessCard_Apartment">
+    <End Type="ApartmentsModel.Apartment" Role="Apartment" Multiplicity="1" />
+    <End Type="ApartmentsModel.AccessCard" Role="AccessCard" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apartment">
+        <PropertyRef Name="A_ID" />
+      </Principal>
+      <Dependent Role="AccessCard">
+        <PropertyRef Name="Apartment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccessCard_Resident">
+    <End Type="ApartmentsModel.Resident1" Role="Resident1" Multiplicity="0..1" />
+    <End Type="ApartmentsModel.AccessCard" Role="AccessCard" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident1">
+        <PropertyRef Name="R_ID" />
+      </Principal>
+      <Dependent Role="AccessCard">
+        <PropertyRef Name="Resident_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Apartment_Complex1">
+    <End Type="ApartmentsModel.Complex" Role="Complex" Multiplicity="1" />
+    <End Type="ApartmentsModel.Apartment" Role="Apartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Complex">
+        <PropertyRef Name="C_ID" />
+      </Principal>
+      <Dependent Role="Apartment">
+        <PropertyRef Name="Complex_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParkingPass_Apartment">
+    <End Type="ApartmentsModel.Apartment" Role="Apartment" Multiplicity="1" />
+    <End Type="ApartmentsModel.ParkingPass" Role="ParkingPass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apartment">
+        <PropertyRef Name="A_ID" />
+      </Principal>
+      <Dependent Role="ParkingPass">
+        <PropertyRef Name="Apartment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resident_Apartment">
+    <End Type="ApartmentsModel.Apartment" Role="Apartment" Multiplicity="1" />
+    <End Type="ApartmentsModel.Resident1" Role="Resident1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apartment">
+        <PropertyRef Name="A_ID" />
+      </Principal>
+      <Dependent Role="Resident1">
+        <PropertyRef Name="Apartment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Room_Apartment">
+    <End Type="ApartmentsModel.Apartment" Role="Apartment" Multiplicity="1" />
+    <End Type="ApartmentsModel.Room1" Role="Room1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Apartment">
+        <PropertyRef Name="A_ID" />
+      </Principal>
+      <Dependent Role="Room1">
+        <PropertyRef Name="Apartment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resident_aspnet_Users">
+    <End Type="ApartmentsModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="ApartmentsModel.Resident1" Role="Resident1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Resident1">
+        <PropertyRef Name="U_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_aspnet_Users">
+    <End Type="ApartmentsModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="ApartmentsModel.Ticket1" Role="Ticket1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Ticket1">
+        <PropertyRef Name="Handler_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_Inventory">
+    <End Type="ApartmentsModel.Vendor" Role="Vendor" Multiplicity="1" />
+    <End Type="ApartmentsModel.Inventory" Role="Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendor">
+        <PropertyRef Name="V_ID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="Vendor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParkingPass_Resident">
+    <End Type="ApartmentsModel.Resident1" Role="Resident1" Multiplicity="0..1" />
+    <End Type="ApartmentsModel.ParkingPass" Role="ParkingPass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident1">
+        <PropertyRef Name="R_ID" />
+      </Principal>
+      <Dependent Role="ParkingPass">
+        <PropertyRef Name="Resident_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaitList_ParkingPass">
+    <End Type="ApartmentsModel.ParkingPass" Role="ParkingPass" Multiplicity="0..1" />
+    <End Type="ApartmentsModel.WaitList" Role="WaitList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParkingPass">
+        <PropertyRef Name="PP_ID" />
+      </Principal>
+      <Dependent Role="WaitList">
+        <PropertyRef Name="ParkingPass_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resident_Room">
+    <End Type="ApartmentsModel.Room1" Role="Room1" Multiplicity="1" />
+    <End Type="ApartmentsModel.Resident1" Role="Resident1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room1">
+        <PropertyRef Name="RM_ID" />
+      </Principal>
+      <Dependent Role="Resident1">
+        <PropertyRef Name="Room_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ticket_Resident">
+    <End Type="ApartmentsModel.Resident1" Role="Resident1" Multiplicity="1" />
+    <End Type="ApartmentsModel.Ticket1" Role="Ticket1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident1">
+        <PropertyRef Name="R_ID" />
+      </Principal>
+      <Dependent Role="Ticket1">
+        <PropertyRef Name="Resident_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaitList_Resident">
+    <End Type="ApartmentsModel.Resident1" Role="Resident1" Multiplicity="1" />
+    <End Type="ApartmentsModel.WaitList" Role="WaitList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resident1">
+        <PropertyRef Name="R_ID" />
+      </Principal>
+      <Dependent Role="WaitList">
+        <PropertyRef Name="Resident_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

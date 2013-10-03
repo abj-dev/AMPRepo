@@ -1,0 +1,88 @@
+﻿@model Apartment.Models.RegisterModel
+
+@{
+    ViewBag.Title = "createUser";
+}
+
+<h2>createUser</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>RegisterModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserName)
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConfirmPassword)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ConfirmPassword)
+            @Html.ValidationMessageFor(model => model.ConfirmPassword)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Role)
+        </div>
+
+        @{
+            
+    var db = Database.Open("ApartmentsConnection");
+
+    var item =  db.Query("SELECT RoleName FROM aspnet_Roles");
+
+    List<SelectListItem> xValues = new List<SelectListItem>() 
+                                   {  new SelectListItem 
+                                          { Selected = true,
+                                            Text = "Select...",
+                                            Value = "Select...",
+                                          }
+                                   };
+    foreach(var i in item)
+    {
+
+        xValues.Add(new SelectListItem
+        {
+            Selected = false,
+            Text = i.RoleName,
+            Value = i.RoleName
+        }
+                 );
+    }
+        
+}
+
+        <div class="editor-field">
+            
+            @Html.DropDownListFor(model => model.Role, xValues);
+            @Html.ValidationMessageFor(model => model.Role)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
