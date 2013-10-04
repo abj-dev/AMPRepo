@@ -19,50 +19,51 @@
     <EntitySet Name="ParkingPass" EntityType="Apartment_Management_Portal_DBModel.Store.ParkingPass" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Resident" EntityType="Apartment_Management_Portal_DBModel.Store.Resident" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Room" EntityType="Apartment_Management_Portal_DBModel.Store.Room" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="Apartment_Management_Portal_DBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Ticket" EntityType="Apartment_Management_Portal_DBModel.Store.Ticket" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Vendor" EntityType="Apartment_Management_Portal_DBModel.Store.Vendor" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="WaitList" EntityType="Apartment_Management_Portal_DBModel.Store.WaitList" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK__aspnet_Me__Appli__09A971A2" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Me__Appli__09A971A2">
+    <AssociationSet Name="FK__aspnet_Me__Appli__6D0D32F4" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Me__Appli__6D0D32F4">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
       <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Me__UserI__0A9D95DB" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Me__UserI__0A9D95DB">
+    <AssociationSet Name="FK__aspnet_Me__UserI__6E01572D" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Me__UserI__6E01572D">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pa__Appli__06CD04F7" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pa__Appli__06CD04F7">
+    <AssociationSet Name="FK__aspnet_Pa__Appli__2645B050" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pa__Appli__2645B050">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
       <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pe__PathI__0B91BA14" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pe__PathI__0B91BA14">
+    <AssociationSet Name="FK__aspnet_Pe__PathI__2DE6D218" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pe__PathI__2DE6D218">
       <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
       <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pe__PathI__0C85DE4D" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pe__PathI__0C85DE4D">
+    <AssociationSet Name="FK__aspnet_Pe__PathI__339FAB6E" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pe__PathI__339FAB6E">
       <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
       <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pe__UserI__0D7A0286" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pe__UserI__0D7A0286">
+    <AssociationSet Name="FK__aspnet_Pe__UserI__3493CFA7" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pe__UserI__3493CFA7">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pr__UserI__0F624AF8" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pr__UserI__0F624AF8">
+    <AssociationSet Name="FK__aspnet_Pr__UserI__03F0984C" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Pr__UserI__03F0984C">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Ro__Appli__07C12930" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Ro__Appli__07C12930">
+    <AssociationSet Name="FK__aspnet_Ro__Appli__0F624AF8" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Ro__Appli__0F624AF8">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
       <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Us__Appli__04E4BC85" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Us__Appli__04E4BC85">
+    <AssociationSet Name="FK__aspnet_Us__Appli__59063A47" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Us__Appli__59063A47">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Us__RoleI__10566F31" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Us__RoleI__10566F31">
+    <AssociationSet Name="FK__aspnet_Us__RoleI__160F4887" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Us__RoleI__160F4887">
       <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
       <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Us__UserI__114A936A" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Us__UserI__114A936A">
+    <AssociationSet Name="FK__aspnet_Us__UserI__151B244E" Association="Apartment_Management_Portal_DBModel.Store.FK__aspnet_Us__UserI__151B244E">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
     </AssociationSet>
@@ -341,6 +342,16 @@
     <Property Name="Resident B" Type="nvarchar" MaxLength="50" />
     <Property Name="Notes" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="Ticket">
     <Key>
       <PropertyRef Name="T_ID" />
@@ -378,7 +389,7 @@
     <Property Name="ParkingPass_ID" Type="int" />
     <Property Name="Notes" Type="nvarchar(max)" />
   </EntityType>
-  <Association Name="FK__aspnet_Me__Appli__09A971A2">
+  <Association Name="FK__aspnet_Me__Appli__6D0D32F4">
     <End Role="aspnet_Applications" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Applications" Multiplicity="1" />
     <End Role="aspnet_Membership" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Membership" Multiplicity="*" />
     <ReferentialConstraint>
@@ -390,7 +401,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Me__UserI__0A9D95DB">
+  <Association Name="FK__aspnet_Me__UserI__6E01572D">
     <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Users" Multiplicity="1" />
     <End Role="aspnet_Membership" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Membership" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -402,7 +413,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pa__Appli__06CD04F7">
+  <Association Name="FK__aspnet_Pa__Appli__2645B050">
     <End Role="aspnet_Applications" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Applications" Multiplicity="1" />
     <End Role="aspnet_Paths" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Paths" Multiplicity="*" />
     <ReferentialConstraint>
@@ -414,7 +425,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pe__PathI__0B91BA14">
+  <Association Name="FK__aspnet_Pe__PathI__2DE6D218">
     <End Role="aspnet_Paths" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Paths" Multiplicity="1" />
     <End Role="aspnet_PersonalizationAllUsers" Type="Apartment_Management_Portal_DBModel.Store.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -426,7 +437,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pe__PathI__0C85DE4D">
+  <Association Name="FK__aspnet_Pe__PathI__339FAB6E">
     <End Role="aspnet_Paths" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Paths" Multiplicity="0..1" />
     <End Role="aspnet_PersonalizationPerUser" Type="Apartment_Management_Portal_DBModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
     <ReferentialConstraint>
@@ -438,7 +449,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pe__UserI__0D7A0286">
+  <Association Name="FK__aspnet_Pe__UserI__3493CFA7">
     <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Users" Multiplicity="0..1" />
     <End Role="aspnet_PersonalizationPerUser" Type="Apartment_Management_Portal_DBModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
     <ReferentialConstraint>
@@ -450,7 +461,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pr__UserI__0F624AF8">
+  <Association Name="FK__aspnet_Pr__UserI__03F0984C">
     <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Users" Multiplicity="1" />
     <End Role="aspnet_Profile" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Profile" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -462,7 +473,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Ro__Appli__07C12930">
+  <Association Name="FK__aspnet_Ro__Appli__0F624AF8">
     <End Role="aspnet_Applications" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Applications" Multiplicity="1" />
     <End Role="aspnet_Roles" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Roles" Multiplicity="*" />
     <ReferentialConstraint>
@@ -474,7 +485,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Us__Appli__04E4BC85">
+  <Association Name="FK__aspnet_Us__Appli__59063A47">
     <End Role="aspnet_Applications" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Applications" Multiplicity="1" />
     <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Users" Multiplicity="*" />
     <ReferentialConstraint>
@@ -486,7 +497,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Us__RoleI__10566F31">
+  <Association Name="FK__aspnet_Us__RoleI__160F4887">
     <End Role="aspnet_Roles" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Roles" Multiplicity="1" />
     <End Role="aspnet_UsersInRoles" Type="Apartment_Management_Portal_DBModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
     <ReferentialConstraint>
@@ -498,7 +509,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Us__UserI__114A936A">
+  <Association Name="FK__aspnet_Us__UserI__151B244E">
     <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.Store.aspnet_Users" Multiplicity="1" />
     <End Role="aspnet_UsersInRoles" Type="Apartment_Management_Portal_DBModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1009,4 +1020,35 @@
     <Parameter Name="ExceptionType" Type="nvarchar" Mode="In" />
     <Parameter Name="Details" Type="ntext" Mode="In" />
   </Function>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
 </Schema>

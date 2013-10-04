@@ -18,6 +18,7 @@
     <EntitySet Name="ParkingPasses" EntityType="Apartment_Management_Portal_DBModel.ParkingPass" />
     <EntitySet Name="Residents" EntityType="Apartment_Management_Portal_DBModel.Resident" />
     <EntitySet Name="Rooms" EntityType="Apartment_Management_Portal_DBModel.Room" />
+    <EntitySet Name="sysdiagrams" EntityType="Apartment_Management_Portal_DBModel.sysdiagram" />
     <EntitySet Name="Tickets" EntityType="Apartment_Management_Portal_DBModel.Ticket" />
     <EntitySet Name="Vendors" EntityType="Apartment_Management_Portal_DBModel.Vendor" />
     <EntitySet Name="WaitLists" EntityType="Apartment_Management_Portal_DBModel.WaitList" />
@@ -45,39 +46,39 @@
       <End Role="Apartment" EntitySet="Apartments" />
       <End Role="Room" EntitySet="Rooms" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Me__Appli__09A971A2" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2">
+    <AssociationSet Name="FK__aspnet_Me__Appli__6D0D32F4" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
       <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pa__Appli__06CD04F7" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7">
+    <AssociationSet Name="FK__aspnet_Pa__Appli__2645B050" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
       <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Ro__Appli__07C12930" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930">
+    <AssociationSet Name="FK__aspnet_Ro__Appli__0F624AF8" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
       <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Us__Appli__04E4BC85" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85">
+    <AssociationSet Name="FK__aspnet_Us__Appli__59063A47" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Me__UserI__0A9D95DB" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB">
+    <AssociationSet Name="FK__aspnet_Me__UserI__6E01572D" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pe__PathI__0B91BA14" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14">
+    <AssociationSet Name="FK__aspnet_Pe__PathI__2DE6D218" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218">
       <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
       <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pe__PathI__0C85DE4D" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D">
+    <AssociationSet Name="FK__aspnet_Pe__PathI__339FAB6E" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E">
       <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
       <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pe__UserI__0D7A0286" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286">
+    <AssociationSet Name="FK__aspnet_Pe__UserI__3493CFA7" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
     </AssociationSet>
-    <AssociationSet Name="FK__aspnet_Pr__UserI__0F624AF8" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8">
+    <AssociationSet Name="FK__aspnet_Pr__UserI__03F0984C" Association="Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
     </AssociationSet>
@@ -122,12 +123,12 @@
     <Key>
       <PropertyRef Name="AC_ID" />
     </Key>
-    <Property Name="AC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Apartment_ID" Type="Int32" Nullable="false" />
-    <Property Name="Resident_ID" Type="Int32" />
-    <Property Name="AccessCard_No" Type="Int32" Nullable="false" />
-    <Property Name="Issued" Type="Boolean" Nullable="false" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="AC_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Apartment_ID" Nullable="false" />
+    <Property Type="Int32" Name="Resident_ID" />
+    <Property Type="Int32" Name="AccessCard_No" Nullable="false" />
+    <Property Type="Boolean" Name="Issued" Nullable="false" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Apartment" Relationship="Apartment_Management_Portal_DBModel.FK_AccessCard_Apartment" FromRole="AccessCard" ToRole="Apartment" />
     <NavigationProperty Name="Resident" Relationship="Apartment_Management_Portal_DBModel.FK_AccessCard_Resident" FromRole="AccessCard" ToRole="Resident" />
   </EntityType>
@@ -135,13 +136,13 @@
     <Key>
       <PropertyRef Name="A_ID" />
     </Key>
-    <Property Name="A_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Complex_ID" Type="Int32" Nullable="false" />
-    <Property Name="Apartment_No" Type="Int32" />
-    <Property Name="Unit_No" Type="Int32" />
-    <Property Name="No_Residents" Type="Int32" />
-    <Property Name="Services" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="A_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Complex_ID" Nullable="false" />
+    <Property Type="Int32" Name="Apartment_No" />
+    <Property Type="Int32" Name="Unit_No" />
+    <Property Type="Int32" Name="No_Residents" />
+    <Property Type="String" Name="Services" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="AccessCards" Relationship="Apartment_Management_Portal_DBModel.FK_AccessCard_Apartment" FromRole="Apartment" ToRole="AccessCard" />
     <NavigationProperty Name="Complex" Relationship="Apartment_Management_Portal_DBModel.FK_Apartment_Complex" FromRole="Apartment" ToRole="Complex" />
     <NavigationProperty Name="ParkingPasses" Relationship="Apartment_Management_Portal_DBModel.FK_ParkingPass_Apartment" FromRole="Apartment" ToRole="ParkingPass" />
@@ -152,97 +153,97 @@
     <Key>
       <PropertyRef Name="ApplicationId" />
     </Key>
-    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
-    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="aspnet_Membership" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
-    <NavigationProperty Name="aspnet_Paths" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
-    <NavigationProperty Name="aspnet_Roles" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
-    <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+    <Property Type="String" Name="ApplicationName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LoweredApplicationName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
   </EntityType>
   <EntityType Name="aspnet_Membership">
     <Key>
       <PropertyRef Name="UserId" />
     </Key>
-    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
-    <Property Name="UserId" Type="Guid" Nullable="false" />
-    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
-    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
-    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
-    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
-    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
-    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
-    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
-    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
-    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
-    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
-    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
-    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="aspnet_Applications" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
-    <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PasswordFormat" Nullable="false" />
+    <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobilePIN" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LoweredEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PasswordQuestion" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PasswordAnswer" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="DateTime" Name="LastLoginDate" Nullable="false" />
+    <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" />
+    <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" />
+    <Property Type="Int32" Name="FailedPasswordAttemptCount" Nullable="false" />
+    <Property Type="DateTime" Name="FailedPasswordAttemptWindowStart" Nullable="false" />
+    <Property Type="Int32" Name="FailedPasswordAnswerAttemptCount" Nullable="false" />
+    <Property Type="DateTime" Name="FailedPasswordAnswerAttemptWindowStart" Nullable="false" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
   </EntityType>
   <EntityType Name="aspnet_Paths">
     <Key>
       <PropertyRef Name="PathId" />
     </Key>
-    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
-    <Property Name="PathId" Type="Guid" Nullable="false" />
-    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="aspnet_Applications" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
-    <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
-    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="Guid" Name="PathId" Nullable="false" />
+    <Property Type="String" Name="Path" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LoweredPath" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
   </EntityType>
   <EntityType Name="aspnet_PersonalizationAllUsers">
     <Key>
       <PropertyRef Name="PathId" />
     </Key>
-    <Property Name="PathId" Type="Guid" Nullable="false" />
-    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="aspnet_Paths" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+    <Property Type="Guid" Name="PathId" Nullable="false" />
+    <Property Type="Binary" Name="PageSettings" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="LastUpdatedDate" Nullable="false" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
   </EntityType>
   <EntityType Name="aspnet_PersonalizationPerUser">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Guid" Nullable="false" />
-    <Property Name="PathId" Type="Guid" />
-    <Property Name="UserId" Type="Guid" />
-    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="aspnet_Paths" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
-    <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="Guid" Name="PathId" />
+    <Property Type="Guid" Name="UserId" />
+    <Property Type="Binary" Name="PageSettings" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="LastUpdatedDate" Nullable="false" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
   </EntityType>
   <EntityType Name="aspnet_Profile">
     <Key>
       <PropertyRef Name="UserId" />
     </Key>
-    <Property Name="UserId" Type="Guid" Nullable="false" />
-    <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="PropertyNames" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PropertyValuesString" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="PropertyValuesBinary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="LastUpdatedDate" Nullable="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
   </EntityType>
   <EntityType Name="aspnet_Roles">
     <Key>
       <PropertyRef Name="RoleId" />
     </Key>
-    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
-    <Property Name="RoleId" Type="Guid" Nullable="false" />
-    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-    <NavigationProperty Name="aspnet_Applications" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="Guid" Name="RoleId" Nullable="false" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LoweredRoleName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
     <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
   </EntityType>
   <EntityType Name="aspnet_SchemaVersions">
@@ -250,25 +251,25 @@
       <PropertyRef Name="Feature" />
       <PropertyRef Name="CompatibleSchemaVersion" />
     </Key>
-    <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-    <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-    <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+    <Property Type="String" Name="Feature" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CompatibleSchemaVersion" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsCurrentVersion" Nullable="false" />
   </EntityType>
   <EntityType Name="aspnet_Users">
     <Key>
       <PropertyRef Name="UserId" />
     </Key>
-    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
-    <Property Name="UserId" Type="Guid" Nullable="false" />
-    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
-    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
-    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
-    <NavigationProperty Name="aspnet_Applications" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
-    <NavigationProperty Name="aspnet_Membership" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
-    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
-    <NavigationProperty Name="aspnet_Profile" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LoweredUserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileAlias" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsAnonymous" Nullable="false" />
+    <Property Type="DateTime" Name="LastActivityDate" Nullable="false" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_Profile" Relationship="Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
     <NavigationProperty Name="Residents" Relationship="Apartment_Management_Portal_DBModel.FK_Resident_aspnet_Users" FromRole="aspnet_Users" ToRole="Resident" />
     <NavigationProperty Name="Tickets" Relationship="Apartment_Management_Portal_DBModel.FK_Ticket_aspnet_Users" FromRole="aspnet_Users" ToRole="Ticket" />
     <NavigationProperty Name="aspnet_Roles" Relationship="Apartment_Management_Portal_DBModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
@@ -277,60 +278,60 @@
     <Key>
       <PropertyRef Name="EventId" />
     </Key>
-    <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
-    <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" />
-    <Property Name="EventTime" Type="DateTime" Nullable="false" />
-    <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
-    <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
-    <Property Name="EventCode" Type="Int32" Nullable="false" />
-    <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
-    <Property Name="Message" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
-    <Property Name="ApplicationPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="RequestUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
-    <Property Name="ExceptionType" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-    <Property Name="Details" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="EventId" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="EventTimeUtc" Nullable="false" />
+    <Property Type="DateTime" Name="EventTime" Nullable="false" />
+    <Property Type="String" Name="EventType" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="EventSequence" Nullable="false" Precision="19" Scale="0" />
+    <Property Type="Decimal" Name="EventOccurrence" Nullable="false" Precision="19" Scale="0" />
+    <Property Type="Int32" Name="EventCode" Nullable="false" />
+    <Property Type="Int32" Name="EventDetailCode" Nullable="false" />
+    <Property Type="String" Name="Message" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApplicationPath" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApplicationVirtualPath" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MachineName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RequestUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ExceptionType" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Details" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Complex">
     <Key>
       <PropertyRef Name="C_ID" />
     </Key>
-    <Property Name="C_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Address" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Maintenance" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Hotline" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="C_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Maintenance" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Hotline" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Apartments" Relationship="Apartment_Management_Portal_DBModel.FK_Apartment_Complex" FromRole="Complex" ToRole="Apartment" />
   </EntityType>
   <EntityType Name="Inventory">
     <Key>
       <PropertyRef Name="I_ID" />
     </Key>
-    <Property Name="I_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Vendor_ID" Type="Int32" Nullable="false" />
-    <Property Name="Category" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Item" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="I_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Vendor_ID" Nullable="false" />
+    <Property Type="String" Name="Category" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Item" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Quantity" Nullable="false" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Vendor" Relationship="Apartment_Management_Portal_DBModel.FK_Inventory_Inventory" FromRole="Inventory" ToRole="Vendor" />
   </EntityType>
   <EntityType Name="ParkingPass">
     <Key>
       <PropertyRef Name="PP_ID" />
     </Key>
-    <Property Name="PP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Apartment_ID" Type="Int32" Nullable="false" />
-    <Property Name="Resident_ID" Type="Int32" />
-    <Property Name="Tag_No" Type="Int32" />
-    <Property Name="Issued" Type="Boolean" Nullable="false" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="PP_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Apartment_ID" Nullable="false" />
+    <Property Type="Int32" Name="Resident_ID" />
+    <Property Type="Int32" Name="Tag_No" />
+    <Property Type="Boolean" Name="Issued" Nullable="false" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Apartment" Relationship="Apartment_Management_Portal_DBModel.FK_ParkingPass_Apartment" FromRole="ParkingPass" ToRole="Apartment" />
     <NavigationProperty Name="Resident" Relationship="Apartment_Management_Portal_DBModel.FK_ParkingPass_Resident" FromRole="ParkingPass" ToRole="Resident" />
     <NavigationProperty Name="WaitLists" Relationship="Apartment_Management_Portal_DBModel.FK_WaitList_ParkingPass" FromRole="ParkingPass" ToRole="WaitList" />
@@ -339,17 +340,17 @@
     <Key>
       <PropertyRef Name="R_ID" />
     </Key>
-    <Property Name="R_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="U_ID" Type="Guid" Nullable="false" />
-    <Property Name="Apartment_ID" Type="Int32" Nullable="false" />
-    <Property Name="Room_ID" Type="Int32" Nullable="false" />
-    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="MoveInDate" Type="DateTime" />
-    <Property Name="MoveOutDate" Type="DateTime" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="R_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="U_ID" Nullable="false" />
+    <Property Type="Int32" Name="Apartment_ID" Nullable="false" />
+    <Property Type="Int32" Name="Room_ID" Nullable="false" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="MoveInDate" />
+    <Property Type="DateTime" Name="MoveOutDate" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="AccessCards" Relationship="Apartment_Management_Portal_DBModel.FK_AccessCard_Resident" FromRole="Resident" ToRole="AccessCard" />
     <NavigationProperty Name="Apartment" Relationship="Apartment_Management_Portal_DBModel.FK_Resident_Apartment" FromRole="Resident" ToRole="Apartment" />
     <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK_Resident_aspnet_Users" FromRole="Resident" ToRole="aspnet_Users" />
@@ -362,30 +363,40 @@
     <Key>
       <PropertyRef Name="RM_ID" />
     </Key>
-    <Property Name="RM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Apartment_ID" Type="Int32" Nullable="false" />
-    <Property Name="Room_No" Type="Int32" Nullable="false" />
-    <Property Name="Resident_A" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Resident_B" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="RM_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Apartment_ID" Nullable="false" />
+    <Property Type="Int32" Name="Room_No" Nullable="false" />
+    <Property Type="String" Name="Resident_A" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Resident_B" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Apartment" Relationship="Apartment_Management_Portal_DBModel.FK_Room_Apartment" FromRole="Room" ToRole="Apartment" />
     <NavigationProperty Name="Residents" Relationship="Apartment_Management_Portal_DBModel.FK_Resident_Room" FromRole="Room" ToRole="Resident" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Ticket">
     <Key>
       <PropertyRef Name="T_ID" />
     </Key>
-    <Property Name="T_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Resident_ID" Type="Int32" Nullable="false" />
-    <Property Name="Handler_ID" Type="Guid" Nullable="false" />
-    <Property Name="Category" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Issue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="Replies" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="Updates" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="Opened" Type="DateTime" />
-    <Property Name="Closed" Type="DateTime" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="T_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Resident_ID" Nullable="false" />
+    <Property Type="Guid" Name="Handler_ID" Nullable="false" />
+    <Property Type="String" Name="Category" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Issue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Replies" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Updates" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Opened" />
+    <Property Type="DateTime" Name="Closed" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="aspnet_Users" Relationship="Apartment_Management_Portal_DBModel.FK_Ticket_aspnet_Users" FromRole="Ticket" ToRole="aspnet_Users" />
     <NavigationProperty Name="Resident" Relationship="Apartment_Management_Portal_DBModel.FK_Ticket_Resident" FromRole="Ticket" ToRole="Resident" />
   </EntityType>
@@ -393,29 +404,29 @@
     <Key>
       <PropertyRef Name="V_ID" />
     </Key>
-    <Property Name="V_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Address" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="V_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Inventories" Relationship="Apartment_Management_Portal_DBModel.FK_Inventory_Inventory" FromRole="Vendor" ToRole="Inventory" />
   </EntityType>
   <EntityType Name="WaitList">
     <Key>
       <PropertyRef Name="WL_ID" />
     </Key>
-    <Property Name="WL_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Resident_ID" Type="Int32" Nullable="false" />
-    <Property Name="Application_Date" Type="DateTime" Nullable="false" />
-    <Property Name="ParkingPass_Issued" Type="Boolean" Nullable="false" />
-    <Property Name="ParkingPass_ID" Type="Int32" />
-    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="Int32" Name="WL_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Resident_ID" Nullable="false" />
+    <Property Type="DateTime" Name="Application_Date" Nullable="false" />
+    <Property Type="Boolean" Name="ParkingPass_Issued" Nullable="false" />
+    <Property Type="Int32" Name="ParkingPass_ID" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ParkingPass" Relationship="Apartment_Management_Portal_DBModel.FK_WaitList_ParkingPass" FromRole="WaitList" ToRole="ParkingPass" />
     <NavigationProperty Name="Resident" Relationship="Apartment_Management_Portal_DBModel.FK_WaitList_Resident" FromRole="WaitList" ToRole="Resident" />
   </EntityType>
   <Association Name="FK_AccessCard_Apartment">
-    <End Role="Apartment" Type="Apartment_Management_Portal_DBModel.Apartment" Multiplicity="1" />
-    <End Role="AccessCard" Type="Apartment_Management_Portal_DBModel.AccessCard" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Apartment" Role="Apartment" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.AccessCard" Role="AccessCard" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Apartment">
         <PropertyRef Name="A_ID" />
@@ -426,8 +437,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_AccessCard_Resident">
-    <End Role="Resident" Type="Apartment_Management_Portal_DBModel.Resident" Multiplicity="0..1" />
-    <End Role="AccessCard" Type="Apartment_Management_Portal_DBModel.AccessCard" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Resident" Role="Resident" Multiplicity="0..1" />
+    <End Type="Apartment_Management_Portal_DBModel.AccessCard" Role="AccessCard" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Resident">
         <PropertyRef Name="R_ID" />
@@ -438,8 +449,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Apartment_Complex">
-    <End Role="Complex" Type="Apartment_Management_Portal_DBModel.Complex" Multiplicity="1" />
-    <End Role="Apartment" Type="Apartment_Management_Portal_DBModel.Apartment" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Complex" Role="Complex" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.Apartment" Role="Apartment" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Complex">
         <PropertyRef Name="C_ID" />
@@ -450,8 +461,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ParkingPass_Apartment">
-    <End Role="Apartment" Type="Apartment_Management_Portal_DBModel.Apartment" Multiplicity="1" />
-    <End Role="ParkingPass" Type="Apartment_Management_Portal_DBModel.ParkingPass" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Apartment" Role="Apartment" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.ParkingPass" Role="ParkingPass" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Apartment">
         <PropertyRef Name="A_ID" />
@@ -462,8 +473,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Resident_Apartment">
-    <End Role="Apartment" Type="Apartment_Management_Portal_DBModel.Apartment" Multiplicity="1" />
-    <End Role="Resident" Type="Apartment_Management_Portal_DBModel.Resident" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Apartment" Role="Apartment" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.Resident" Role="Resident" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Apartment">
         <PropertyRef Name="A_ID" />
@@ -474,8 +485,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Room_Apartment">
-    <End Role="Apartment" Type="Apartment_Management_Portal_DBModel.Apartment" Multiplicity="1" />
-    <End Role="Room" Type="Apartment_Management_Portal_DBModel.Room" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Apartment" Role="Apartment" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.Room" Role="Room" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Apartment">
         <PropertyRef Name="A_ID" />
@@ -485,9 +496,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Me__Appli__09A971A2">
-    <End Role="aspnet_Applications" Type="Apartment_Management_Portal_DBModel.aspnet_Applications" Multiplicity="1" />
-    <End Role="aspnet_Membership" Type="Apartment_Management_Portal_DBModel.aspnet_Membership" Multiplicity="*" />
+  <Association Name="FK__aspnet_Me__Appli__6D0D32F4">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Applications">
         <PropertyRef Name="ApplicationId" />
@@ -497,9 +508,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pa__Appli__06CD04F7">
-    <End Role="aspnet_Applications" Type="Apartment_Management_Portal_DBModel.aspnet_Applications" Multiplicity="1" />
-    <End Role="aspnet_Paths" Type="Apartment_Management_Portal_DBModel.aspnet_Paths" Multiplicity="*" />
+  <Association Name="FK__aspnet_Pa__Appli__2645B050">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Applications">
         <PropertyRef Name="ApplicationId" />
@@ -509,9 +520,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Ro__Appli__07C12930">
-    <End Role="aspnet_Applications" Type="Apartment_Management_Portal_DBModel.aspnet_Applications" Multiplicity="1" />
-    <End Role="aspnet_Roles" Type="Apartment_Management_Portal_DBModel.aspnet_Roles" Multiplicity="*" />
+  <Association Name="FK__aspnet_Ro__Appli__0F624AF8">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Roles" Role="aspnet_Roles" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Applications">
         <PropertyRef Name="ApplicationId" />
@@ -521,9 +532,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Us__Appli__04E4BC85">
-    <End Role="aspnet_Applications" Type="Apartment_Management_Portal_DBModel.aspnet_Applications" Multiplicity="1" />
-    <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.aspnet_Users" Multiplicity="*" />
+  <Association Name="FK__aspnet_Us__Appli__59063A47">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Users" Role="aspnet_Users" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Applications">
         <PropertyRef Name="ApplicationId" />
@@ -533,9 +544,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Me__UserI__0A9D95DB">
-    <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.aspnet_Users" Multiplicity="1" />
-    <End Role="aspnet_Membership" Type="Apartment_Management_Portal_DBModel.aspnet_Membership" Multiplicity="0..1" />
+  <Association Name="FK__aspnet_Me__UserI__6E01572D">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Users">
         <PropertyRef Name="UserId" />
@@ -545,9 +556,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pe__PathI__0B91BA14">
-    <End Role="aspnet_Paths" Type="Apartment_Management_Portal_DBModel.aspnet_Paths" Multiplicity="1" />
-    <End Role="aspnet_PersonalizationAllUsers" Type="Apartment_Management_Portal_DBModel.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+  <Association Name="FK__aspnet_Pe__PathI__2DE6D218">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_PersonalizationAllUsers" Role="aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Paths">
         <PropertyRef Name="PathId" />
@@ -557,9 +568,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pe__PathI__0C85DE4D">
-    <End Role="aspnet_Paths" Type="Apartment_Management_Portal_DBModel.aspnet_Paths" Multiplicity="0..1" />
-    <End Role="aspnet_PersonalizationPerUser" Type="Apartment_Management_Portal_DBModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+  <Association Name="FK__aspnet_Pe__PathI__339FAB6E">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="0..1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_PersonalizationPerUser" Role="aspnet_PersonalizationPerUser" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Paths">
         <PropertyRef Name="PathId" />
@@ -569,9 +580,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pe__UserI__0D7A0286">
-    <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.aspnet_Users" Multiplicity="0..1" />
-    <End Role="aspnet_PersonalizationPerUser" Type="Apartment_Management_Portal_DBModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+  <Association Name="FK__aspnet_Pe__UserI__3493CFA7">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Users" Role="aspnet_Users" Multiplicity="0..1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_PersonalizationPerUser" Role="aspnet_PersonalizationPerUser" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Users">
         <PropertyRef Name="UserId" />
@@ -581,9 +592,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__aspnet_Pr__UserI__0F624AF8">
-    <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.aspnet_Users" Multiplicity="1" />
-    <End Role="aspnet_Profile" Type="Apartment_Management_Portal_DBModel.aspnet_Profile" Multiplicity="0..1" />
+  <Association Name="FK__aspnet_Pr__UserI__03F0984C">
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Profile" Role="aspnet_Profile" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Users">
         <PropertyRef Name="UserId" />
@@ -594,8 +605,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Resident_aspnet_Users">
-    <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.aspnet_Users" Multiplicity="1" />
-    <End Role="Resident" Type="Apartment_Management_Portal_DBModel.Resident" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.Resident" Role="Resident" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Users">
         <PropertyRef Name="UserId" />
@@ -606,8 +617,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Ticket_aspnet_Users">
-    <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.aspnet_Users" Multiplicity="1" />
-    <End Role="Ticket" Type="Apartment_Management_Portal_DBModel.Ticket" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.Ticket" Role="Ticket" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="aspnet_Users">
         <PropertyRef Name="UserId" />
@@ -618,8 +629,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Inventory_Inventory">
-    <End Role="Vendor" Type="Apartment_Management_Portal_DBModel.Vendor" Multiplicity="1" />
-    <End Role="Inventory" Type="Apartment_Management_Portal_DBModel.Inventory" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Vendor" Role="Vendor" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.Inventory" Role="Inventory" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Vendor">
         <PropertyRef Name="V_ID" />
@@ -630,8 +641,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ParkingPass_Resident">
-    <End Role="Resident" Type="Apartment_Management_Portal_DBModel.Resident" Multiplicity="0..1" />
-    <End Role="ParkingPass" Type="Apartment_Management_Portal_DBModel.ParkingPass" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Resident" Role="Resident" Multiplicity="0..1" />
+    <End Type="Apartment_Management_Portal_DBModel.ParkingPass" Role="ParkingPass" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Resident">
         <PropertyRef Name="R_ID" />
@@ -642,8 +653,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_WaitList_ParkingPass">
-    <End Role="ParkingPass" Type="Apartment_Management_Portal_DBModel.ParkingPass" Multiplicity="0..1" />
-    <End Role="WaitList" Type="Apartment_Management_Portal_DBModel.WaitList" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.ParkingPass" Role="ParkingPass" Multiplicity="0..1" />
+    <End Type="Apartment_Management_Portal_DBModel.WaitList" Role="WaitList" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ParkingPass">
         <PropertyRef Name="PP_ID" />
@@ -654,8 +665,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Resident_Room">
-    <End Role="Room" Type="Apartment_Management_Portal_DBModel.Room" Multiplicity="1" />
-    <End Role="Resident" Type="Apartment_Management_Portal_DBModel.Resident" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Room" Role="Room" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.Resident" Role="Resident" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Room">
         <PropertyRef Name="RM_ID" />
@@ -666,8 +677,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Ticket_Resident">
-    <End Role="Resident" Type="Apartment_Management_Portal_DBModel.Resident" Multiplicity="1" />
-    <End Role="Ticket" Type="Apartment_Management_Portal_DBModel.Ticket" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Resident" Role="Resident" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.Ticket" Role="Ticket" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Resident">
         <PropertyRef Name="R_ID" />
@@ -678,8 +689,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_WaitList_Resident">
-    <End Role="Resident" Type="Apartment_Management_Portal_DBModel.Resident" Multiplicity="1" />
-    <End Role="WaitList" Type="Apartment_Management_Portal_DBModel.WaitList" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.Resident" Role="Resident" Multiplicity="1" />
+    <End Type="Apartment_Management_Portal_DBModel.WaitList" Role="WaitList" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Resident">
         <PropertyRef Name="R_ID" />
@@ -690,7 +701,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="aspnet_UsersInRoles">
-    <End Role="aspnet_Roles" Type="Apartment_Management_Portal_DBModel.aspnet_Roles" Multiplicity="*" />
-    <End Role="aspnet_Users" Type="Apartment_Management_Portal_DBModel.aspnet_Users" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Roles" Role="aspnet_Roles" Multiplicity="*" />
+    <End Type="Apartment_Management_Portal_DBModel.aspnet_Users" Role="aspnet_Users" Multiplicity="*" />
   </Association>
 </Schema>

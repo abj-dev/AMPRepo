@@ -68,9 +68,7 @@ C:\ApartmentPortal\Apartment\bin\System.Web.WebPages.dll
 C:\ApartmentPortal\Apartment\bin\System.Web.WebPages.Razor.dll
 C:\ApartmentPortal\Apartment\bin\WebMatrix.Data.dll
 C:\ApartmentPortal\Apartment\bin\WebMatrix.WebData.dll
-C:\ApartmentPortal\Apartment\bin\EntityFramework.xml
 C:\ApartmentPortal\Apartment\bin\Microsoft.Web.Infrastructure.xml
-C:\ApartmentPortal\Apartment\bin\Newtonsoft.Json.xml
 C:\ApartmentPortal\Apartment\bin\System.Net.Http.xml
 C:\ApartmentPortal\Apartment\bin\System.Net.Http.Formatting.xml
 C:\ApartmentPortal\Apartment\bin\System.Net.Http.WebRequest.xml
@@ -85,12 +83,6 @@ C:\ApartmentPortal\Apartment\bin\System.Web.WebPages.Razor.xml
 C:\ApartmentPortal\Apartment\bin\WebMatrix.Data.xml
 C:\ApartmentPortal\Apartment\bin\Microsoft.Web.WebPages.OAuth.xml
 C:\ApartmentPortal\Apartment\bin\WebMatrix.WebData.xml
-C:\ApartmentPortal\Apartment\bin\DotNetOpenAuth.AspNet.xml
-C:\ApartmentPortal\Apartment\bin\DotNetOpenAuth.Core.xml
-C:\ApartmentPortal\Apartment\bin\DotNetOpenAuth.OAuth.Consumer.xml
-C:\ApartmentPortal\Apartment\bin\DotNetOpenAuth.OAuth.xml
-C:\ApartmentPortal\Apartment\bin\DotNetOpenAuth.OpenId.xml
-C:\ApartmentPortal\Apartment\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-C:\ApartmentPortal\Apartment\obj\Debug\ResolveAssemblyReference.cache
 C:\ApartmentPortal\Apartment\obj\Debug\Apartment.dll
 C:\ApartmentPortal\Apartment\obj\Debug\Apartment.pdb
+C:\ApartmentPortal\Apartment\obj\Debug\ResolveAssemblyReference.cache

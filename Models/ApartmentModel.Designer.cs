@@ -8,12 +8,13 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
@@ -24,15 +25,15 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK_ParkingPass_Apartment", "Apartment", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.Apartment), "ParkingPass", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.ParkingPass), true)]
 [assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK_Resident_Apartment", "Apartment", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.Apartment), "Resident", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.Resident), true)]
 [assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK_Room_Apartment", "Apartment", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.Apartment), "Room", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.Room), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__Appli__09A971A2", "aspnet_Applications", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Applications), "aspnet_Membership", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_Membership), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Applications", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Applications), "aspnet_Paths", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_Paths), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Ro__Appli__07C12930", "aspnet_Applications", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Applications), "aspnet_Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_Roles), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Us__Appli__04E4BC85", "aspnet_Applications", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Applications), "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_Users), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Users), "aspnet_Membership", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_Membership), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__0B91BA14", "aspnet_Paths", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Paths), "aspnet_PersonalizationAllUsers", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_PersonalizationAllUsers), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_Paths", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_Paths), "aspnet_PersonalizationPerUser", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_PersonalizationPerUser), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__UserI__0D7A0286", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_Users), "aspnet_PersonalizationPerUser", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_PersonalizationPerUser), true)]
-[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Users), "aspnet_Profile", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_Profile), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Applications", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Applications), "aspnet_Membership", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_Membership), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pa__Appli__2645B050", "aspnet_Applications", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Applications), "aspnet_Paths", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_Paths), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Applications", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Applications), "aspnet_Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_Roles), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Us__Appli__59063A47", "aspnet_Applications", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Applications), "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_Users), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__UserI__6E01572D", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Users), "aspnet_Membership", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_Membership), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__2DE6D218", "aspnet_Paths", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Paths), "aspnet_PersonalizationAllUsers", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_PersonalizationAllUsers), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__339FAB6E", "aspnet_Paths", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_Paths), "aspnet_PersonalizationPerUser", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_PersonalizationPerUser), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__UserI__3493CFA7", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_Users), "aspnet_PersonalizationPerUser", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.aspnet_PersonalizationPerUser), true)]
+[assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pr__UserI__03F0984C", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Users), "aspnet_Profile", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Apartment.Models.aspnet_Profile), true)]
 [assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK_Resident_aspnet_Users", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Users), "Resident", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.Resident), true)]
 [assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK_Ticket_aspnet_Users", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.aspnet_Users), "Ticket", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.Ticket), true)]
 [assembly: EdmRelationshipAttribute("Apartment_Management_Portal_DBModel", "FK_Inventory_Inventory", "Vendor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Apartment.Models.Vendor), "Inventory", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Apartment.Models.Inventory), true)]
@@ -368,6 +369,22 @@ namespace Apartment.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<sysdiagram> sysdiagrams
+        {
+            get
+            {
+                if ((_sysdiagrams == null))
+                {
+                    _sysdiagrams = base.CreateObjectSet<sysdiagram>("sysdiagrams");
+                }
+                return _sysdiagrams;
+            }
+        }
+        private ObjectSet<sysdiagram> _sysdiagrams;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<Ticket> Tickets
         {
             get
@@ -414,6 +431,7 @@ namespace Apartment.Models
         private ObjectSet<WaitList> _WaitLists;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -553,6 +571,14 @@ namespace Apartment.Models
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTosysdiagrams(sysdiagram sysdiagram)
+        {
+            base.AddObject("sysdiagrams", sysdiagram);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the Tickets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToTickets(Ticket ticket)
@@ -577,11 +603,11 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -612,6 +638,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -762,6 +789,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -842,6 +870,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -868,6 +897,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1042,6 +1072,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1172,6 +1203,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1200,6 +1232,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1302,6 +1335,7 @@ namespace Apartment.Models
         partial void OnDescriptionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1311,18 +1345,18 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__Appli__09A971A2", "aspnet_Membership")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Membership")]
         public EntityCollection<aspnet_Membership> aspnet_Membership
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2", "aspnet_Membership");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Membership");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2", "aspnet_Membership", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Membership", value);
                 }
             }
         }
@@ -1333,18 +1367,18 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Paths")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pa__Appli__2645B050", "aspnet_Paths")]
         public EntityCollection<aspnet_Paths> aspnet_Paths
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Paths");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050", "aspnet_Paths");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Paths", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050", "aspnet_Paths", value);
                 }
             }
         }
@@ -1355,18 +1389,18 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Ro__Appli__07C12930", "aspnet_Roles")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Roles")]
         public EntityCollection<aspnet_Roles> aspnet_Roles
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_Roles>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930", "aspnet_Roles");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_Roles>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Roles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Roles>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930", "aspnet_Roles", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Roles>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Roles", value);
                 }
             }
         }
@@ -1377,23 +1411,24 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Us__Appli__04E4BC85", "aspnet_Users")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Us__Appli__59063A47", "aspnet_Users")]
         public EntityCollection<aspnet_Users> aspnet_Users
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85", "aspnet_Users");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47", "aspnet_Users");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85", "aspnet_Users", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47", "aspnet_Users", value);
                 }
             }
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1446,6 +1481,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1956,6 +1992,7 @@ namespace Apartment.Models
         partial void OnCommentChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1965,16 +2002,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__Appli__09A971A2", "aspnet_Applications")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Applications")]
         public aspnet_Applications aspnet_Applications
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2", "aspnet_Applications").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Applications").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2", "aspnet_Applications").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Applications").Value = value;
             }
         }
         /// <summary>
@@ -1986,13 +2023,13 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2", "aspnet_Applications");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Applications");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__09A971A2", "aspnet_Applications", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__Appli__6D0D32F4", "aspnet_Applications", value);
                 }
             }
         }
@@ -2003,16 +2040,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Users")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__UserI__6E01572D", "aspnet_Users")]
         public aspnet_Users aspnet_Users
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Users").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D", "aspnet_Users").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Users").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D", "aspnet_Users").Value = value;
             }
         }
         /// <summary>
@@ -2024,18 +2061,19 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Users");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D", "aspnet_Users");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Users", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D", "aspnet_Users", value);
                 }
             }
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2066,6 +2104,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2168,6 +2207,7 @@ namespace Apartment.Models
         partial void OnLoweredPathChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2177,16 +2217,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Applications")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pa__Appli__2645B050", "aspnet_Applications")]
         public aspnet_Applications aspnet_Applications
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Applications").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050", "aspnet_Applications").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Applications").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050", "aspnet_Applications").Value = value;
             }
         }
         /// <summary>
@@ -2198,13 +2238,13 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Applications");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050", "aspnet_Applications");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__06CD04F7", "aspnet_Applications", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Pa__Appli__2645B050", "aspnet_Applications", value);
                 }
             }
         }
@@ -2215,16 +2255,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__0B91BA14", "aspnet_PersonalizationAllUsers")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__2DE6D218", "aspnet_PersonalizationAllUsers")]
         public aspnet_PersonalizationAllUsers aspnet_PersonalizationAllUsers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_PersonalizationAllUsers>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14", "aspnet_PersonalizationAllUsers").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_PersonalizationAllUsers>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218", "aspnet_PersonalizationAllUsers").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_PersonalizationAllUsers>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14", "aspnet_PersonalizationAllUsers").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_PersonalizationAllUsers>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218", "aspnet_PersonalizationAllUsers").Value = value;
             }
         }
         /// <summary>
@@ -2236,13 +2276,13 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_PersonalizationAllUsers>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14", "aspnet_PersonalizationAllUsers");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_PersonalizationAllUsers>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218", "aspnet_PersonalizationAllUsers");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_PersonalizationAllUsers>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14", "aspnet_PersonalizationAllUsers", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_PersonalizationAllUsers>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218", "aspnet_PersonalizationAllUsers", value);
                 }
             }
         }
@@ -2253,23 +2293,24 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_PersonalizationPerUser")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__339FAB6E", "aspnet_PersonalizationPerUser")]
         public EntityCollection<aspnet_PersonalizationPerUser> aspnet_PersonalizationPerUser
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_PersonalizationPerUser>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_PersonalizationPerUser");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_PersonalizationPerUser>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E", "aspnet_PersonalizationPerUser");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_PersonalizationPerUser>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_PersonalizationPerUser", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_PersonalizationPerUser>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E", "aspnet_PersonalizationPerUser", value);
                 }
             }
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2298,6 +2339,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2376,6 +2418,7 @@ namespace Apartment.Models
         partial void OnLastUpdatedDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2385,16 +2428,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__0B91BA14", "aspnet_Paths")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__2DE6D218", "aspnet_Paths")]
         public aspnet_Paths aspnet_Paths
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14", "aspnet_Paths").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218", "aspnet_Paths").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14", "aspnet_Paths").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218", "aspnet_Paths").Value = value;
             }
         }
         /// <summary>
@@ -2406,18 +2449,19 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14", "aspnet_Paths");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218", "aspnet_Paths");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0B91BA14", "aspnet_Paths", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__2DE6D218", "aspnet_Paths", value);
                 }
             }
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2446,6 +2490,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2572,6 +2617,7 @@ namespace Apartment.Models
         partial void OnLastUpdatedDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2581,16 +2627,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_Paths")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__PathI__339FAB6E", "aspnet_Paths")]
         public aspnet_Paths aspnet_Paths
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_Paths").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E", "aspnet_Paths").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_Paths").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E", "aspnet_Paths").Value = value;
             }
         }
         /// <summary>
@@ -2602,13 +2648,13 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_Paths");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E", "aspnet_Paths");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D", "aspnet_Paths", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Paths>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__PathI__339FAB6E", "aspnet_Paths", value);
                 }
             }
         }
@@ -2619,16 +2665,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__UserI__0D7A0286", "aspnet_Users")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__UserI__3493CFA7", "aspnet_Users")]
         public aspnet_Users aspnet_Users
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286", "aspnet_Users").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7", "aspnet_Users").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286", "aspnet_Users").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7", "aspnet_Users").Value = value;
             }
         }
         /// <summary>
@@ -2640,18 +2686,19 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286", "aspnet_Users");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7", "aspnet_Users");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286", "aspnet_Users", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7", "aspnet_Users", value);
                 }
             }
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2684,6 +2731,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2810,6 +2858,7 @@ namespace Apartment.Models
         partial void OnLastUpdatedDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2819,16 +2868,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Users")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pr__UserI__03F0984C", "aspnet_Users")]
         public aspnet_Users aspnet_Users
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Users").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C", "aspnet_Users").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Users").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C", "aspnet_Users").Value = value;
             }
         }
         /// <summary>
@@ -2840,18 +2889,19 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Users");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C", "aspnet_Users");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Users", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Users>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C", "aspnet_Users", value);
                 }
             }
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2882,6 +2932,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3008,6 +3059,7 @@ namespace Apartment.Models
         partial void OnDescriptionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3017,16 +3069,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Ro__Appli__07C12930", "aspnet_Applications")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Applications")]
         public aspnet_Applications aspnet_Applications
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930", "aspnet_Applications").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Applications").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930", "aspnet_Applications").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Applications").Value = value;
             }
         }
         /// <summary>
@@ -3038,13 +3090,13 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930", "aspnet_Applications");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Applications");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__07C12930", "aspnet_Applications", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Ro__Appli__0F624AF8", "aspnet_Applications", value);
                 }
             }
         }
@@ -3072,6 +3124,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3100,6 +3153,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3181,6 +3235,7 @@ namespace Apartment.Models
         partial void OnIsCurrentVersionChanged();
 
         #endregion
+
     
     }
     
@@ -3216,6 +3271,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3390,6 +3446,7 @@ namespace Apartment.Models
         partial void OnLastActivityDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3399,16 +3456,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Us__Appli__04E4BC85", "aspnet_Applications")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Us__Appli__59063A47", "aspnet_Applications")]
         public aspnet_Applications aspnet_Applications
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85", "aspnet_Applications").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47", "aspnet_Applications").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85", "aspnet_Applications").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47", "aspnet_Applications").Value = value;
             }
         }
         /// <summary>
@@ -3420,13 +3477,13 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85", "aspnet_Applications");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47", "aspnet_Applications");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__04E4BC85", "aspnet_Applications", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Applications>("Apartment_Management_Portal_DBModel.FK__aspnet_Us__Appli__59063A47", "aspnet_Applications", value);
                 }
             }
         }
@@ -3437,16 +3494,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Membership")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Me__UserI__6E01572D", "aspnet_Membership")]
         public aspnet_Membership aspnet_Membership
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Membership").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D", "aspnet_Membership").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Membership").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D", "aspnet_Membership").Value = value;
             }
         }
         /// <summary>
@@ -3458,13 +3515,13 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Membership");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D", "aspnet_Membership");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__0A9D95DB", "aspnet_Membership", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Membership>("Apartment_Management_Portal_DBModel.FK__aspnet_Me__UserI__6E01572D", "aspnet_Membership", value);
                 }
             }
         }
@@ -3475,18 +3532,18 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__UserI__0D7A0286", "aspnet_PersonalizationPerUser")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pe__UserI__3493CFA7", "aspnet_PersonalizationPerUser")]
         public EntityCollection<aspnet_PersonalizationPerUser> aspnet_PersonalizationPerUser
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_PersonalizationPerUser>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286", "aspnet_PersonalizationPerUser");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<aspnet_PersonalizationPerUser>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7", "aspnet_PersonalizationPerUser");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_PersonalizationPerUser>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__0D7A0286", "aspnet_PersonalizationPerUser", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_PersonalizationPerUser>("Apartment_Management_Portal_DBModel.FK__aspnet_Pe__UserI__3493CFA7", "aspnet_PersonalizationPerUser", value);
                 }
             }
         }
@@ -3497,16 +3554,16 @@ namespace Apartment.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Profile")]
+        [EdmRelationshipNavigationPropertyAttribute("Apartment_Management_Portal_DBModel", "FK__aspnet_Pr__UserI__03F0984C", "aspnet_Profile")]
         public aspnet_Profile aspnet_Profile
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Profile>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Profile").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Profile>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C", "aspnet_Profile").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Profile>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Profile").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Profile>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C", "aspnet_Profile").Value = value;
             }
         }
         /// <summary>
@@ -3518,13 +3575,13 @@ namespace Apartment.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Profile>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Profile");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Profile>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C", "aspnet_Profile");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Profile>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__0F624AF8", "aspnet_Profile", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Profile>("Apartment_Management_Portal_DBModel.FK__aspnet_Pr__UserI__03F0984C", "aspnet_Profile", value);
                 }
             }
         }
@@ -3596,6 +3653,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3636,6 +3694,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4002,6 +4061,7 @@ namespace Apartment.Models
         partial void OnDetailsChanged();
 
         #endregion
+
     
     }
     
@@ -4027,6 +4087,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4225,6 +4286,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4251,6 +4313,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4283,6 +4346,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4481,6 +4545,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4523,6 +4588,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4551,6 +4617,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4701,6 +4768,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4803,6 +4871,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4833,6 +4902,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5103,6 +5173,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5309,6 +5380,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5337,6 +5409,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5487,6 +5560,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5551,6 +5625,164 @@ namespace Apartment.Models
         }
 
         #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="Apartment_Management_Portal_DBModel", Name="sysdiagram")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class sysdiagram : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new sysdiagram object.
+        /// </summary>
+        /// <param name="name">Initial value of the name property.</param>
+        /// <param name="principal_id">Initial value of the principal_id property.</param>
+        /// <param name="diagram_id">Initial value of the diagram_id property.</param>
+        public static sysdiagram Createsysdiagram(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
+        {
+            sysdiagram sysdiagram = new sysdiagram();
+            sysdiagram.name = name;
+            sysdiagram.principal_id = principal_id;
+            sysdiagram.diagram_id = diagram_id;
+            return sysdiagram;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 principal_id
+        {
+            get
+            {
+                return _principal_id;
+            }
+            set
+            {
+                Onprincipal_idChanging(value);
+                ReportPropertyChanging("principal_id");
+                _principal_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("principal_id");
+                Onprincipal_idChanged();
+            }
+        }
+        private global::System.Int32 _principal_id;
+        partial void Onprincipal_idChanging(global::System.Int32 value);
+        partial void Onprincipal_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 diagram_id
+        {
+            get
+            {
+                return _diagram_id;
+            }
+            set
+            {
+                if (_diagram_id != value)
+                {
+                    Ondiagram_idChanging(value);
+                    ReportPropertyChanging("diagram_id");
+                    _diagram_id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("diagram_id");
+                    Ondiagram_idChanged();
+                }
+            }
+        }
+        private global::System.Int32 _diagram_id;
+        partial void Ondiagram_idChanging(global::System.Int32 value);
+        partial void Ondiagram_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
+
+        #endregion
+
+    
     }
     
     /// <summary>
@@ -5579,6 +5811,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5849,6 +6082,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5929,6 +6163,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5953,6 +6188,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -6079,6 +6315,7 @@ namespace Apartment.Models
         partial void OnEmailChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -6105,6 +6342,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -6135,6 +6373,7 @@ namespace Apartment.Models
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -6285,6 +6524,7 @@ namespace Apartment.Models
         partial void OnNotesChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -6365,8 +6605,10 @@ namespace Apartment.Models
         }
 
         #endregion
+
     }
 
     #endregion
+
     
 }

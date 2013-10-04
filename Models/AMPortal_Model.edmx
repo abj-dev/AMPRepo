@@ -1,0 +1,2165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AMPortal_DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="AMPortal_DBModelStoreContainer">
+          <EntitySet Name="AccessCard" EntityType="AMPortal_DBModel.Store.AccessCard" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Apartment" EntityType="AMPortal_DBModel.Store.Apartment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Applications" EntityType="AMPortal_DBModel.Store.aspnet_Applications" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Membership" EntityType="AMPortal_DBModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Paths" EntityType="AMPortal_DBModel.Store.aspnet_Paths" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="AMPortal_DBModel.Store.aspnet_PersonalizationAllUsers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="AMPortal_DBModel.Store.aspnet_PersonalizationPerUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Profile" EntityType="AMPortal_DBModel.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Roles" EntityType="AMPortal_DBModel.Store.aspnet_Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_SchemaVersions" EntityType="AMPortal_DBModel.Store.aspnet_SchemaVersions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_Users" EntityType="AMPortal_DBModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_UsersInRoles" EntityType="AMPortal_DBModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="aspnet_WebEvent_Events" EntityType="AMPortal_DBModel.Store.aspnet_WebEvent_Events" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Complex" EntityType="AMPortal_DBModel.Store.Complex" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Inventory" EntityType="AMPortal_DBModel.Store.Inventory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ParkingPass" EntityType="AMPortal_DBModel.Store.ParkingPass" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Resident" EntityType="AMPortal_DBModel.Store.Resident" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Room" EntityType="AMPortal_DBModel.Store.Room" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ticket" EntityType="AMPortal_DBModel.Store.Ticket" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vendor" EntityType="AMPortal_DBModel.Store.Vendor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WaitList" EntityType="AMPortal_DBModel.Store.WaitList" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__aspnet_Me__Appli__09A971A2" Association="AMPortal_DBModel.Store.FK__aspnet_Me__Appli__09A971A2">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__UserI__0A9D95DB" Association="AMPortal_DBModel.Store.FK__aspnet_Me__UserI__0A9D95DB">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pa__Appli__06CD04F7" Association="AMPortal_DBModel.Store.FK__aspnet_Pa__Appli__06CD04F7">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__0B91BA14" Association="AMPortal_DBModel.Store.FK__aspnet_Pe__PathI__0B91BA14">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__0C85DE4D" Association="AMPortal_DBModel.Store.FK__aspnet_Pe__PathI__0C85DE4D">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__UserI__0D7A0286" Association="AMPortal_DBModel.Store.FK__aspnet_Pe__UserI__0D7A0286">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pr__UserI__0F624AF8" Association="AMPortal_DBModel.Store.FK__aspnet_Pr__UserI__0F624AF8">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Ro__Appli__07C12930" Association="AMPortal_DBModel.Store.FK__aspnet_Ro__Appli__07C12930">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__Appli__04E4BC85" Association="AMPortal_DBModel.Store.FK__aspnet_Us__Appli__04E4BC85">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__RoleI__10566F31" Association="AMPortal_DBModel.Store.FK__aspnet_Us__RoleI__10566F31">
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+            <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__UserI__114A936A" Association="AMPortal_DBModel.Store.FK__aspnet_Us__UserI__114A936A">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccessCard_Apartment" Association="AMPortal_DBModel.Store.FK_AccessCard_Apartment">
+            <End Role="Apartment" EntitySet="Apartment" />
+            <End Role="AccessCard" EntitySet="AccessCard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccessCard_Resident" Association="AMPortal_DBModel.Store.FK_AccessCard_Resident">
+            <End Role="Resident" EntitySet="Resident" />
+            <End Role="AccessCard" EntitySet="AccessCard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Apartment_Complex" Association="AMPortal_DBModel.Store.FK_Apartment_Complex">
+            <End Role="Complex" EntitySet="Complex" />
+            <End Role="Apartment" EntitySet="Apartment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inventory_Inventory" Association="AMPortal_DBModel.Store.FK_Inventory_Inventory">
+            <End Role="Vendor" EntitySet="Vendor" />
+            <End Role="Inventory" EntitySet="Inventory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParkingPass_Apartment" Association="AMPortal_DBModel.Store.FK_ParkingPass_Apartment">
+            <End Role="Apartment" EntitySet="Apartment" />
+            <End Role="ParkingPass" EntitySet="ParkingPass" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParkingPass_Resident" Association="AMPortal_DBModel.Store.FK_ParkingPass_Resident">
+            <End Role="Resident" EntitySet="Resident" />
+            <End Role="ParkingPass" EntitySet="ParkingPass" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resident_Apartment" Association="AMPortal_DBModel.Store.FK_Resident_Apartment">
+            <End Role="Apartment" EntitySet="Apartment" />
+            <End Role="Resident" EntitySet="Resident" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resident_aspnet_Users" Association="AMPortal_DBModel.Store.FK_Resident_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="Resident" EntitySet="Resident" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resident_Room" Association="AMPortal_DBModel.Store.FK_Resident_Room">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="Resident" EntitySet="Resident" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Room_Apartment" Association="AMPortal_DBModel.Store.FK_Room_Apartment">
+            <End Role="Apartment" EntitySet="Apartment" />
+            <End Role="Room" EntitySet="Room" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ticket_aspnet_Users" Association="AMPortal_DBModel.Store.FK_Ticket_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="Ticket" EntitySet="Ticket" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ticket_Resident" Association="AMPortal_DBModel.Store.FK_Ticket_Resident">
+            <End Role="Resident" EntitySet="Resident" />
+            <End Role="Ticket" EntitySet="Ticket" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WaitList_ParkingPass" Association="AMPortal_DBModel.Store.FK_WaitList_ParkingPass">
+            <End Role="ParkingPass" EntitySet="ParkingPass" />
+            <End Role="WaitList" EntitySet="WaitList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WaitList_Resident" Association="AMPortal_DBModel.Store.FK_WaitList_Resident">
+            <End Role="Resident" EntitySet="Resident" />
+            <End Role="WaitList" EntitySet="WaitList" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AccessCard">
+          <Key>
+            <PropertyRef Name="AC_ID" />
+          </Key>
+          <Property Name="AC_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Apartment_ID" Type="int" Nullable="false" />
+          <Property Name="Resident_ID" Type="int" />
+          <Property Name="AccessCard.No" Type="int" Nullable="false" />
+          <Property Name="Issued" Type="bit" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Apartment">
+          <Key>
+            <PropertyRef Name="A_ID" />
+          </Key>
+          <Property Name="A_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Complex_ID" Type="int" Nullable="false" />
+          <Property Name="Apartment.No" Type="int" />
+          <Property Name="Unit.No" Type="int" />
+          <Property Name="No.Residents" Type="int" />
+          <Property Name="Services" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordFormat" Type="int" Nullable="false" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+          <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsApproved" Type="bit" Nullable="false" />
+          <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+          <Property Name="Comment" Type="ntext" />
+        </EntityType>
+        <EntityType Name="aspnet_Paths">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationAllUsers">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PageSettings" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationPerUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PathId" Type="uniqueidentifier" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="PageSettings" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Profile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+          <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+          <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="aspnet_SchemaVersions">
+          <Key>
+            <PropertyRef Name="Feature" />
+            <PropertyRef Name="CompatibleSchemaVersion" />
+          </Key>
+          <Property Name="Feature" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="CompatibleSchemaVersion" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_UsersInRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_WebEvent_Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="char" Nullable="false" MaxLength="32" />
+          <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+          <Property Name="EventTime" Type="datetime" Nullable="false" />
+          <Property Name="EventType" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="EventSequence" Type="decimal" Nullable="false" Precision="19" />
+          <Property Name="EventOccurrence" Type="decimal" Nullable="false" Precision="19" />
+          <Property Name="EventCode" Type="int" Nullable="false" />
+          <Property Name="EventDetailCode" Type="int" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+          <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+          <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+          <Property Name="Details" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Complex">
+          <Key>
+            <PropertyRef Name="C_ID" />
+          </Key>
+          <Property Name="C_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="Maintenance" Type="nvarchar" MaxLength="50" />
+          <Property Name="Hotline" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="I_ID" />
+          </Key>
+          <Property Name="I_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor_ID" Type="int" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Item" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ParkingPass">
+          <Key>
+            <PropertyRef Name="PP_ID" />
+          </Key>
+          <Property Name="PP_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Apartment_ID" Type="int" Nullable="false" />
+          <Property Name="Resident_ID" Type="int" />
+          <Property Name="Tag.No" Type="int" />
+          <Property Name="Issued" Type="bit" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Resident">
+          <Key>
+            <PropertyRef Name="R_ID" />
+          </Key>
+          <Property Name="R_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="U_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Apartment_ID" Type="int" Nullable="false" />
+          <Property Name="Room_ID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="MoveInDate" Type="date" />
+          <Property Name="MoveOutDate" Type="date" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="RM_ID" />
+          </Key>
+          <Property Name="RM_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Apartment_ID" Type="int" Nullable="false" />
+          <Property Name="Room.No" Type="int" Nullable="false" />
+          <Property Name="Resident A" Type="nvarchar" MaxLength="50" />
+          <Property Name="Resident B" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="T_ID" />
+          </Key>
+          <Property Name="T_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Resident_ID" Type="int" Nullable="false" />
+          <Property Name="Handler_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Issue" Type="nvarchar(max)" />
+          <Property Name="Replies" Type="nvarchar(max)" />
+          <Property Name="Updates" Type="nvarchar(max)" />
+          <Property Name="Opened" Type="date" />
+          <Property Name="Closed" Type="date" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="V_ID" />
+          </Key>
+          <Property Name="V_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="WaitList">
+          <Key>
+            <PropertyRef Name="WL_ID" />
+          </Key>
+          <Property Name="WL_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Resident_ID" Type="int" Nullable="false" />
+          <Property Name="Application Date" Type="date" Nullable="false" />
+          <Property Name="ParkingPass_Issued" Type="bit" Nullable="false" />
+          <Property Name="ParkingPass_ID" Type="int" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK__aspnet_Me__Appli__09A971A2">
+          <End Role="aspnet_Applications" Type="AMPortal_DBModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="AMPortal_DBModel.Store.aspnet_Membership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__UserI__0A9D95DB">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="AMPortal_DBModel.Store.aspnet_Membership" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pa__Appli__06CD04F7">
+          <End Role="aspnet_Applications" Type="AMPortal_DBModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Paths" Type="AMPortal_DBModel.Store.aspnet_Paths" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Paths">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__0B91BA14">
+          <End Role="aspnet_Paths" Type="AMPortal_DBModel.Store.aspnet_Paths" Multiplicity="1" />
+          <End Role="aspnet_PersonalizationAllUsers" Type="AMPortal_DBModel.Store.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationAllUsers">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__0C85DE4D">
+          <End Role="aspnet_Paths" Type="AMPortal_DBModel.Store.aspnet_Paths" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="AMPortal_DBModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__UserI__0D7A0286">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.Store.aspnet_Users" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="AMPortal_DBModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pr__UserI__0F624AF8">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Profile" Type="AMPortal_DBModel.Store.aspnet_Profile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Profile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Ro__Appli__07C12930">
+          <End Role="aspnet_Applications" Type="AMPortal_DBModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Roles" Type="AMPortal_DBModel.Store.aspnet_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Roles">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__Appli__04E4BC85">
+          <End Role="aspnet_Applications" Type="AMPortal_DBModel.Store.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.Store.aspnet_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Users">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__RoleI__10566F31">
+          <End Role="aspnet_Roles" Type="AMPortal_DBModel.Store.aspnet_Roles" Multiplicity="1" />
+          <End Role="aspnet_UsersInRoles" Type="AMPortal_DBModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="aspnet_UsersInRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__UserI__114A936A">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_UsersInRoles" Type="AMPortal_DBModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_UsersInRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccessCard_Apartment">
+          <End Role="Apartment" Type="AMPortal_DBModel.Store.Apartment" Multiplicity="1" />
+          <End Role="AccessCard" Type="AMPortal_DBModel.Store.AccessCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apartment">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="AccessCard">
+              <PropertyRef Name="Apartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccessCard_Resident">
+          <End Role="Resident" Type="AMPortal_DBModel.Store.Resident" Multiplicity="0..1" />
+          <End Role="AccessCard" Type="AMPortal_DBModel.Store.AccessCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resident">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="AccessCard">
+              <PropertyRef Name="Resident_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Apartment_Complex">
+          <End Role="Complex" Type="AMPortal_DBModel.Store.Complex" Multiplicity="1" />
+          <End Role="Apartment" Type="AMPortal_DBModel.Store.Apartment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Complex">
+              <PropertyRef Name="C_ID" />
+            </Principal>
+            <Dependent Role="Apartment">
+              <PropertyRef Name="Complex_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inventory_Inventory">
+          <End Role="Vendor" Type="AMPortal_DBModel.Store.Vendor" Multiplicity="1" />
+          <End Role="Inventory" Type="AMPortal_DBModel.Store.Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="V_ID" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="Vendor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParkingPass_Apartment">
+          <End Role="Apartment" Type="AMPortal_DBModel.Store.Apartment" Multiplicity="1" />
+          <End Role="ParkingPass" Type="AMPortal_DBModel.Store.ParkingPass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apartment">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="ParkingPass">
+              <PropertyRef Name="Apartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParkingPass_Resident">
+          <End Role="Resident" Type="AMPortal_DBModel.Store.Resident" Multiplicity="0..1" />
+          <End Role="ParkingPass" Type="AMPortal_DBModel.Store.ParkingPass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resident">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="ParkingPass">
+              <PropertyRef Name="Resident_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resident_Apartment">
+          <End Role="Apartment" Type="AMPortal_DBModel.Store.Apartment" Multiplicity="1" />
+          <End Role="Resident" Type="AMPortal_DBModel.Store.Resident" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apartment">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Resident">
+              <PropertyRef Name="Apartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resident_aspnet_Users">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="Resident" Type="AMPortal_DBModel.Store.Resident" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Resident">
+              <PropertyRef Name="U_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resident_Room">
+          <End Role="Room" Type="AMPortal_DBModel.Store.Room" Multiplicity="1" />
+          <End Role="Resident" Type="AMPortal_DBModel.Store.Resident" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="RM_ID" />
+            </Principal>
+            <Dependent Role="Resident">
+              <PropertyRef Name="Room_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Room_Apartment">
+          <End Role="Apartment" Type="AMPortal_DBModel.Store.Apartment" Multiplicity="1" />
+          <End Role="Room" Type="AMPortal_DBModel.Store.Room" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apartment">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Room">
+              <PropertyRef Name="Apartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ticket_aspnet_Users">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.Store.aspnet_Users" Multiplicity="1" />
+          <End Role="Ticket" Type="AMPortal_DBModel.Store.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="Handler_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ticket_Resident">
+          <End Role="Resident" Type="AMPortal_DBModel.Store.Resident" Multiplicity="1" />
+          <End Role="Ticket" Type="AMPortal_DBModel.Store.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resident">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="Resident_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WaitList_ParkingPass">
+          <End Role="ParkingPass" Type="AMPortal_DBModel.Store.ParkingPass" Multiplicity="0..1" />
+          <End Role="WaitList" Type="AMPortal_DBModel.Store.WaitList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParkingPass">
+              <PropertyRef Name="PP_ID" />
+            </Principal>
+            <Dependent Role="WaitList">
+              <PropertyRef Name="ParkingPass_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WaitList_Resident">
+          <End Role="Resident" Type="AMPortal_DBModel.Store.Resident" Multiplicity="1" />
+          <End Role="WaitList" Type="AMPortal_DBModel.Store.WaitList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resident">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="WaitList">
+              <PropertyRef Name="Resident_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="aspnet_AnyDataInTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TablesToCheck" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Applications_CreateApplication" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_CheckSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+          <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_ChangePasswordQuestionAndAnswer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPasswordQuestion" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPasswordAnswer" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_CreateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password" Type="nvarchar" Mode="In" />
+          <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="PasswordQuestion" Type="nvarchar" Mode="In" />
+          <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsApproved" Type="bit" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="CreateDate" Type="datetime" Mode="In" />
+          <Parameter Name="UniqueEmail" Type="int" Mode="In" />
+          <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_Membership_FindUsersByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="EmailToMatch" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_FindUsersByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetNumberOfUsersOnline" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="MinutesSinceLastInActive" Type="int" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+          <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetPasswordWithFormat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UpdateLastLoginActivityDate" Type="bit" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetUserByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetUserByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="UpdateLastActivity" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_GetUserByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="UpdateLastActivity" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_ResetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+          <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+          <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+          <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_SetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_UnlockUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_UpdateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="Comment" Type="ntext" Mode="In" />
+          <Parameter Name="IsApproved" Type="bit" Mode="In" />
+          <Parameter Name="LastLoginDate" Type="datetime" Mode="In" />
+          <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+          <Parameter Name="UniqueEmail" Type="int" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Membership_UpdateUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsPasswordCorrect" Type="bit" Mode="In" />
+          <Parameter Name="UpdateLastLoginActivityDate" Type="bit" Mode="In" />
+          <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+          <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="LastLoginDate" Type="datetime" Mode="In" />
+          <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Paths_CreatePath" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="PathId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_Personalization_GetApplicationId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_DeleteAllState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Count" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_FindState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_GetCountOfState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Count" Type="int" Mode="InOut" />
+          <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_ResetSharedState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Count" Type="int" Mode="InOut" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAdministration_ResetUserState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Count" Type="int" Mode="InOut" />
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAllUsers_GetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAllUsers_ResetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationAllUsers_SetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageSettings" Type="image" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationPerUser_GetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationPerUser_ResetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_PersonalizationPerUser_SetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Path" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageSettings" Type="image" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_DeleteInactiveProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_DeleteProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_GetNumberOfInactiveProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_GetProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+          <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_GetProperties" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Profile_SetProperties" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="PropertyNames" Type="ntext" Mode="In" />
+          <Parameter Name="PropertyValuesString" Type="ntext" Mode="In" />
+          <Parameter Name="PropertyValuesBinary" Type="image" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsUserAnonymous" Type="bit" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_RegisterSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+          <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsCurrentVersion" Type="bit" Mode="In" />
+          <Parameter Name="RemoveIncompatibleSchema" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Roles_CreateRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Roles_DeleteRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+          <Parameter Name="DeleteOnlyIfRoleIsEmpty" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Roles_GetAllRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Roles_RoleExists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Setup_RemoveAllRoleMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Setup_RestorePermissions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UnRegisterSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+          <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_Users_CreateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsUserAnonymous" Type="bit" Mode="In" />
+          <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+          <Parameter Name="UserId" Type="uniqueidentifier" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_Users_DeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="TablesToDeleteFrom" Type="int" Mode="In" />
+          <Parameter Name="NumTablesDeletedFrom" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_AddUsersToRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
+          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_FindUsersInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_GetRolesForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_GetUsersInRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_IsUserInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_UsersInRoles_RemoveUsersFromRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="aspnet_WebEvent_LogEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EventId" Type="char" Mode="In" />
+          <Parameter Name="EventTimeUtc" Type="datetime" Mode="In" />
+          <Parameter Name="EventTime" Type="datetime" Mode="In" />
+          <Parameter Name="EventType" Type="nvarchar" Mode="In" />
+          <Parameter Name="EventSequence" Type="decimal" Mode="In" />
+          <Parameter Name="EventOccurrence" Type="decimal" Mode="In" />
+          <Parameter Name="EventCode" Type="int" Mode="In" />
+          <Parameter Name="EventDetailCode" Type="int" Mode="In" />
+          <Parameter Name="Message" Type="nvarchar" Mode="In" />
+          <Parameter Name="ApplicationPath" Type="nvarchar" Mode="In" />
+          <Parameter Name="ApplicationVirtualPath" Type="nvarchar" Mode="In" />
+          <Parameter Name="MachineName" Type="nvarchar" Mode="In" />
+          <Parameter Name="RequestUrl" Type="nvarchar" Mode="In" />
+          <Parameter Name="ExceptionType" Type="nvarchar" Mode="In" />
+          <Parameter Name="Details" Type="ntext" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AMPortal_DBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AMPortal_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AccessCards" EntityType="AMPortal_DBModel.AccessCard" />
+          <EntitySet Name="Apartments" EntityType="AMPortal_DBModel.Apartment" />
+          <EntitySet Name="aspnet_Applications" EntityType="AMPortal_DBModel.aspnet_Applications" />
+          <EntitySet Name="aspnet_Membership" EntityType="AMPortal_DBModel.aspnet_Membership" />
+          <EntitySet Name="aspnet_Paths" EntityType="AMPortal_DBModel.aspnet_Paths" />
+          <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="AMPortal_DBModel.aspnet_PersonalizationAllUsers" />
+          <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="AMPortal_DBModel.aspnet_PersonalizationPerUser" />
+          <EntitySet Name="aspnet_Profile" EntityType="AMPortal_DBModel.aspnet_Profile" />
+          <EntitySet Name="aspnet_Roles" EntityType="AMPortal_DBModel.aspnet_Roles" />
+          <EntitySet Name="aspnet_SchemaVersions" EntityType="AMPortal_DBModel.aspnet_SchemaVersions" />
+          <EntitySet Name="aspnet_Users" EntityType="AMPortal_DBModel.aspnet_Users" />
+          <EntitySet Name="aspnet_WebEvent_Events" EntityType="AMPortal_DBModel.aspnet_WebEvent_Events" />
+          <EntitySet Name="Complexes" EntityType="AMPortal_DBModel.Complex" />
+          <EntitySet Name="Inventories" EntityType="AMPortal_DBModel.Inventory" />
+          <EntitySet Name="ParkingPasses" EntityType="AMPortal_DBModel.ParkingPass" />
+          <EntitySet Name="Residents" EntityType="AMPortal_DBModel.Resident" />
+          <EntitySet Name="Rooms" EntityType="AMPortal_DBModel.Room" />
+          <EntitySet Name="Tickets" EntityType="AMPortal_DBModel.Ticket" />
+          <EntitySet Name="Vendors" EntityType="AMPortal_DBModel.Vendor" />
+          <EntitySet Name="WaitLists" EntityType="AMPortal_DBModel.WaitList" />
+          <AssociationSet Name="FK_AccessCard_Apartment" Association="AMPortal_DBModel.FK_AccessCard_Apartment">
+            <End Role="Apartment" EntitySet="Apartments" />
+            <End Role="AccessCard" EntitySet="AccessCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AccessCard_Resident" Association="AMPortal_DBModel.FK_AccessCard_Resident">
+            <End Role="Resident" EntitySet="Residents" />
+            <End Role="AccessCard" EntitySet="AccessCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Apartment_Complex" Association="AMPortal_DBModel.FK_Apartment_Complex">
+            <End Role="Complex" EntitySet="Complexes" />
+            <End Role="Apartment" EntitySet="Apartments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParkingPass_Apartment" Association="AMPortal_DBModel.FK_ParkingPass_Apartment">
+            <End Role="Apartment" EntitySet="Apartments" />
+            <End Role="ParkingPass" EntitySet="ParkingPasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resident_Apartment" Association="AMPortal_DBModel.FK_Resident_Apartment">
+            <End Role="Apartment" EntitySet="Apartments" />
+            <End Role="Resident" EntitySet="Residents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Room_Apartment" Association="AMPortal_DBModel.FK_Room_Apartment">
+            <End Role="Apartment" EntitySet="Apartments" />
+            <End Role="Room" EntitySet="Rooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__Appli__09A971A2" Association="AMPortal_DBModel.FK__aspnet_Me__Appli__09A971A2">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pa__Appli__06CD04F7" Association="AMPortal_DBModel.FK__aspnet_Pa__Appli__06CD04F7">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Ro__Appli__07C12930" Association="AMPortal_DBModel.FK__aspnet_Ro__Appli__07C12930">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Us__Appli__04E4BC85" Association="AMPortal_DBModel.FK__aspnet_Us__Appli__04E4BC85">
+            <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Me__UserI__0A9D95DB" Association="AMPortal_DBModel.FK__aspnet_Me__UserI__0A9D95DB">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__0B91BA14" Association="AMPortal_DBModel.FK__aspnet_Pe__PathI__0B91BA14">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__PathI__0C85DE4D" Association="AMPortal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D">
+            <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pe__UserI__0D7A0286" Association="AMPortal_DBModel.FK__aspnet_Pe__UserI__0D7A0286">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__aspnet_Pr__UserI__0F624AF8" Association="AMPortal_DBModel.FK__aspnet_Pr__UserI__0F624AF8">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resident_aspnet_Users" Association="AMPortal_DBModel.FK_Resident_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="Resident" EntitySet="Residents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ticket_aspnet_Users" Association="AMPortal_DBModel.FK_Ticket_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="Ticket" EntitySet="Tickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inventory_Inventory" Association="AMPortal_DBModel.FK_Inventory_Inventory">
+            <End Role="Vendor" EntitySet="Vendors" />
+            <End Role="Inventory" EntitySet="Inventories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParkingPass_Resident" Association="AMPortal_DBModel.FK_ParkingPass_Resident">
+            <End Role="Resident" EntitySet="Residents" />
+            <End Role="ParkingPass" EntitySet="ParkingPasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WaitList_ParkingPass" Association="AMPortal_DBModel.FK_WaitList_ParkingPass">
+            <End Role="ParkingPass" EntitySet="ParkingPasses" />
+            <End Role="WaitList" EntitySet="WaitLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resident_Room" Association="AMPortal_DBModel.FK_Resident_Room">
+            <End Role="Room" EntitySet="Rooms" />
+            <End Role="Resident" EntitySet="Residents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ticket_Resident" Association="AMPortal_DBModel.FK_Ticket_Resident">
+            <End Role="Resident" EntitySet="Residents" />
+            <End Role="Ticket" EntitySet="Tickets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WaitList_Resident" Association="AMPortal_DBModel.FK_WaitList_Resident">
+            <End Role="Resident" EntitySet="Residents" />
+            <End Role="WaitList" EntitySet="WaitLists" />
+          </AssociationSet>
+          <AssociationSet Name="aspnet_UsersInRoles" Association="AMPortal_DBModel.aspnet_UsersInRoles">
+            <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AccessCard">
+          <Key>
+            <PropertyRef Name="AC_ID" />
+          </Key>
+          <Property Name="AC_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Apartment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Resident_ID" Type="Int32" />
+          <Property Name="AccessCard_No" Type="Int32" Nullable="false" />
+          <Property Name="Issued" Type="Boolean" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Apartment" Relationship="AMPortal_DBModel.FK_AccessCard_Apartment" FromRole="AccessCard" ToRole="Apartment" />
+          <NavigationProperty Name="Resident" Relationship="AMPortal_DBModel.FK_AccessCard_Resident" FromRole="AccessCard" ToRole="Resident" />
+        </EntityType>
+        <EntityType Name="Apartment">
+          <Key>
+            <PropertyRef Name="A_ID" />
+          </Key>
+          <Property Name="A_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Complex_ID" Type="Int32" Nullable="false" />
+          <Property Name="Apartment_No" Type="Int32" />
+          <Property Name="Unit_No" Type="Int32" />
+          <Property Name="No_Residents" Type="Int32" />
+          <Property Name="Services" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AccessCards" Relationship="AMPortal_DBModel.FK_AccessCard_Apartment" FromRole="Apartment" ToRole="AccessCard" />
+          <NavigationProperty Name="Complex" Relationship="AMPortal_DBModel.FK_Apartment_Complex" FromRole="Apartment" ToRole="Complex" />
+          <NavigationProperty Name="ParkingPasses" Relationship="AMPortal_DBModel.FK_ParkingPass_Apartment" FromRole="Apartment" ToRole="ParkingPass" />
+          <NavigationProperty Name="Residents" Relationship="AMPortal_DBModel.FK_Resident_Apartment" FromRole="Apartment" ToRole="Resident" />
+          <NavigationProperty Name="Rooms" Relationship="AMPortal_DBModel.FK_Room_Apartment" FromRole="Apartment" ToRole="Room" />
+        </EntityType>
+        <EntityType Name="aspnet_Applications">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="AMPortal_DBModel.FK__aspnet_Me__Appli__09A971A2" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="AMPortal_DBModel.FK__aspnet_Pa__Appli__06CD04F7" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="AMPortal_DBModel.FK__aspnet_Ro__Appli__07C12930" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+          <NavigationProperty Name="aspnet_Users" Relationship="AMPortal_DBModel.FK__aspnet_Us__Appli__04E4BC85" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+          <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+          <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="AMPortal_DBModel.FK__aspnet_Me__Appli__09A971A2" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="AMPortal_DBModel.FK__aspnet_Me__UserI__0A9D95DB" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Paths">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="PathId" Type="Guid" Nullable="false" />
+          <Property Name="Path" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="AMPortal_DBModel.FK__aspnet_Pa__Appli__06CD04F7" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="AMPortal_DBModel.FK__aspnet_Pe__PathI__0B91BA14" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="AMPortal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationAllUsers">
+          <Key>
+            <PropertyRef Name="PathId" />
+          </Key>
+          <Property Name="PathId" Type="Guid" Nullable="false" />
+          <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="AMPortal_DBModel.FK__aspnet_Pe__PathI__0B91BA14" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+        </EntityType>
+        <EntityType Name="aspnet_PersonalizationPerUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="PathId" Type="Guid" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="AMPortal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Users" Relationship="AMPortal_DBModel.FK__aspnet_Pe__UserI__0D7A0286" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Profile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="aspnet_Users" Relationship="AMPortal_DBModel.FK__aspnet_Pr__UserI__0F624AF8" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="RoleId" Type="Guid" Nullable="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="AMPortal_DBModel.FK__aspnet_Ro__Appli__07C12930" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="AMPortal_DBModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
+        </EntityType>
+        <EntityType Name="aspnet_SchemaVersions">
+          <Key>
+            <PropertyRef Name="Feature" />
+            <PropertyRef Name="CompatibleSchemaVersion" />
+          </Key>
+          <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="AMPortal_DBModel.FK__aspnet_Us__Appli__04E4BC85" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="AMPortal_DBModel.FK__aspnet_Me__UserI__0A9D95DB" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="AMPortal_DBModel.FK__aspnet_Pe__UserI__0D7A0286" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+          <NavigationProperty Name="aspnet_Profile" Relationship="AMPortal_DBModel.FK__aspnet_Pr__UserI__0F624AF8" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+          <NavigationProperty Name="Residents" Relationship="AMPortal_DBModel.FK_Resident_aspnet_Users" FromRole="aspnet_Users" ToRole="Resident" />
+          <NavigationProperty Name="Tickets" Relationship="AMPortal_DBModel.FK_Ticket_aspnet_Users" FromRole="aspnet_Users" ToRole="Ticket" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="AMPortal_DBModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
+        </EntityType>
+        <EntityType Name="aspnet_WebEvent_Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
+          <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" />
+          <Property Name="EventTime" Type="DateTime" Nullable="false" />
+          <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+          <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+          <Property Name="EventCode" Type="Int32" Nullable="false" />
+          <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="ApplicationPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="RequestUrl" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="ExceptionType" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Details" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Complex">
+          <Key>
+            <PropertyRef Name="C_ID" />
+          </Key>
+          <Property Name="C_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Maintenance" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Hotline" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Apartments" Relationship="AMPortal_DBModel.FK_Apartment_Complex" FromRole="Complex" ToRole="Apartment" />
+        </EntityType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="I_ID" />
+          </Key>
+          <Property Name="I_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor_ID" Type="Int32" Nullable="false" />
+          <Property Name="Category" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Vendor" Relationship="AMPortal_DBModel.FK_Inventory_Inventory" FromRole="Inventory" ToRole="Vendor" />
+        </EntityType>
+        <EntityType Name="ParkingPass">
+          <Key>
+            <PropertyRef Name="PP_ID" />
+          </Key>
+          <Property Name="PP_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Apartment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Resident_ID" Type="Int32" />
+          <Property Name="Tag_No" Type="Int32" />
+          <Property Name="Issued" Type="Boolean" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Apartment" Relationship="AMPortal_DBModel.FK_ParkingPass_Apartment" FromRole="ParkingPass" ToRole="Apartment" />
+          <NavigationProperty Name="Resident" Relationship="AMPortal_DBModel.FK_ParkingPass_Resident" FromRole="ParkingPass" ToRole="Resident" />
+          <NavigationProperty Name="WaitLists" Relationship="AMPortal_DBModel.FK_WaitList_ParkingPass" FromRole="ParkingPass" ToRole="WaitList" />
+        </EntityType>
+        <EntityType Name="Resident">
+          <Key>
+            <PropertyRef Name="R_ID" />
+          </Key>
+          <Property Name="R_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="U_ID" Type="Guid" Nullable="false" />
+          <Property Name="Apartment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Room_ID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MoveInDate" Type="DateTime" />
+          <Property Name="MoveOutDate" Type="DateTime" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="AccessCards" Relationship="AMPortal_DBModel.FK_AccessCard_Resident" FromRole="Resident" ToRole="AccessCard" />
+          <NavigationProperty Name="Apartment" Relationship="AMPortal_DBModel.FK_Resident_Apartment" FromRole="Resident" ToRole="Apartment" />
+          <NavigationProperty Name="aspnet_Users" Relationship="AMPortal_DBModel.FK_Resident_aspnet_Users" FromRole="Resident" ToRole="aspnet_Users" />
+          <NavigationProperty Name="ParkingPasses" Relationship="AMPortal_DBModel.FK_ParkingPass_Resident" FromRole="Resident" ToRole="ParkingPass" />
+          <NavigationProperty Name="Room" Relationship="AMPortal_DBModel.FK_Resident_Room" FromRole="Resident" ToRole="Room" />
+          <NavigationProperty Name="Tickets" Relationship="AMPortal_DBModel.FK_Ticket_Resident" FromRole="Resident" ToRole="Ticket" />
+          <NavigationProperty Name="WaitLists" Relationship="AMPortal_DBModel.FK_WaitList_Resident" FromRole="Resident" ToRole="WaitList" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="RM_ID" />
+          </Key>
+          <Property Name="RM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Apartment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Room_No" Type="Int32" Nullable="false" />
+          <Property Name="Resident_A" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Resident_B" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Apartment" Relationship="AMPortal_DBModel.FK_Room_Apartment" FromRole="Room" ToRole="Apartment" />
+          <NavigationProperty Name="Residents" Relationship="AMPortal_DBModel.FK_Resident_Room" FromRole="Room" ToRole="Resident" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="T_ID" />
+          </Key>
+          <Property Name="T_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Resident_ID" Type="Int32" Nullable="false" />
+          <Property Name="Handler_ID" Type="Guid" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Issue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Replies" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Updates" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Opened" Type="DateTime" />
+          <Property Name="Closed" Type="DateTime" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="aspnet_Users" Relationship="AMPortal_DBModel.FK_Ticket_aspnet_Users" FromRole="Ticket" ToRole="aspnet_Users" />
+          <NavigationProperty Name="Resident" Relationship="AMPortal_DBModel.FK_Ticket_Resident" FromRole="Ticket" ToRole="Resident" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="V_ID" />
+          </Key>
+          <Property Name="V_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Inventories" Relationship="AMPortal_DBModel.FK_Inventory_Inventory" FromRole="Vendor" ToRole="Inventory" />
+        </EntityType>
+        <EntityType Name="WaitList">
+          <Key>
+            <PropertyRef Name="WL_ID" />
+          </Key>
+          <Property Name="WL_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Resident_ID" Type="Int32" Nullable="false" />
+          <Property Name="Application_Date" Type="DateTime" Nullable="false" />
+          <Property Name="ParkingPass_Issued" Type="Boolean" Nullable="false" />
+          <Property Name="ParkingPass_ID" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ParkingPass" Relationship="AMPortal_DBModel.FK_WaitList_ParkingPass" FromRole="WaitList" ToRole="ParkingPass" />
+          <NavigationProperty Name="Resident" Relationship="AMPortal_DBModel.FK_WaitList_Resident" FromRole="WaitList" ToRole="Resident" />
+        </EntityType>
+        <Association Name="FK_AccessCard_Apartment">
+          <End Role="Apartment" Type="AMPortal_DBModel.Apartment" Multiplicity="1" />
+          <End Role="AccessCard" Type="AMPortal_DBModel.AccessCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apartment">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="AccessCard">
+              <PropertyRef Name="Apartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AccessCard_Resident">
+          <End Role="Resident" Type="AMPortal_DBModel.Resident" Multiplicity="0..1" />
+          <End Role="AccessCard" Type="AMPortal_DBModel.AccessCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resident">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="AccessCard">
+              <PropertyRef Name="Resident_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Apartment_Complex">
+          <End Role="Complex" Type="AMPortal_DBModel.Complex" Multiplicity="1" />
+          <End Role="Apartment" Type="AMPortal_DBModel.Apartment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Complex">
+              <PropertyRef Name="C_ID" />
+            </Principal>
+            <Dependent Role="Apartment">
+              <PropertyRef Name="Complex_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParkingPass_Apartment">
+          <End Role="Apartment" Type="AMPortal_DBModel.Apartment" Multiplicity="1" />
+          <End Role="ParkingPass" Type="AMPortal_DBModel.ParkingPass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apartment">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="ParkingPass">
+              <PropertyRef Name="Apartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resident_Apartment">
+          <End Role="Apartment" Type="AMPortal_DBModel.Apartment" Multiplicity="1" />
+          <End Role="Resident" Type="AMPortal_DBModel.Resident" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apartment">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Resident">
+              <PropertyRef Name="Apartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Room_Apartment">
+          <End Role="Apartment" Type="AMPortal_DBModel.Apartment" Multiplicity="1" />
+          <End Role="Room" Type="AMPortal_DBModel.Room" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apartment">
+              <PropertyRef Name="A_ID" />
+            </Principal>
+            <Dependent Role="Room">
+              <PropertyRef Name="Apartment_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__Appli__09A971A2">
+          <End Role="aspnet_Applications" Type="AMPortal_DBModel.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="AMPortal_DBModel.aspnet_Membership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pa__Appli__06CD04F7">
+          <End Role="aspnet_Applications" Type="AMPortal_DBModel.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Paths" Type="AMPortal_DBModel.aspnet_Paths" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Paths">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Ro__Appli__07C12930">
+          <End Role="aspnet_Applications" Type="AMPortal_DBModel.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Roles" Type="AMPortal_DBModel.aspnet_Roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Roles">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Us__Appli__04E4BC85">
+          <End Role="aspnet_Applications" Type="AMPortal_DBModel.aspnet_Applications" Multiplicity="1" />
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.aspnet_Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Applications">
+              <PropertyRef Name="ApplicationId" />
+            </Principal>
+            <Dependent Role="aspnet_Users">
+              <PropertyRef Name="ApplicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Me__UserI__0A9D95DB">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Membership" Type="AMPortal_DBModel.aspnet_Membership" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Membership">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__0B91BA14">
+          <End Role="aspnet_Paths" Type="AMPortal_DBModel.aspnet_Paths" Multiplicity="1" />
+          <End Role="aspnet_PersonalizationAllUsers" Type="AMPortal_DBModel.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationAllUsers">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__PathI__0C85DE4D">
+          <End Role="aspnet_Paths" Type="AMPortal_DBModel.aspnet_Paths" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="AMPortal_DBModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Paths">
+              <PropertyRef Name="PathId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="PathId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pe__UserI__0D7A0286">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.aspnet_Users" Multiplicity="0..1" />
+          <End Role="aspnet_PersonalizationPerUser" Type="AMPortal_DBModel.aspnet_PersonalizationPerUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_PersonalizationPerUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__aspnet_Pr__UserI__0F624AF8">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Profile" Type="AMPortal_DBModel.aspnet_Profile" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Profile">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resident_aspnet_Users">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.aspnet_Users" Multiplicity="1" />
+          <End Role="Resident" Type="AMPortal_DBModel.Resident" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Resident">
+              <PropertyRef Name="U_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ticket_aspnet_Users">
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.aspnet_Users" Multiplicity="1" />
+          <End Role="Ticket" Type="AMPortal_DBModel.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="Handler_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inventory_Inventory">
+          <End Role="Vendor" Type="AMPortal_DBModel.Vendor" Multiplicity="1" />
+          <End Role="Inventory" Type="AMPortal_DBModel.Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="V_ID" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="Vendor_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParkingPass_Resident">
+          <End Role="Resident" Type="AMPortal_DBModel.Resident" Multiplicity="0..1" />
+          <End Role="ParkingPass" Type="AMPortal_DBModel.ParkingPass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resident">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="ParkingPass">
+              <PropertyRef Name="Resident_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WaitList_ParkingPass">
+          <End Role="ParkingPass" Type="AMPortal_DBModel.ParkingPass" Multiplicity="0..1" />
+          <End Role="WaitList" Type="AMPortal_DBModel.WaitList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParkingPass">
+              <PropertyRef Name="PP_ID" />
+            </Principal>
+            <Dependent Role="WaitList">
+              <PropertyRef Name="ParkingPass_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resident_Room">
+          <End Role="Room" Type="AMPortal_DBModel.Room" Multiplicity="1" />
+          <End Role="Resident" Type="AMPortal_DBModel.Resident" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="RM_ID" />
+            </Principal>
+            <Dependent Role="Resident">
+              <PropertyRef Name="Room_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ticket_Resident">
+          <End Role="Resident" Type="AMPortal_DBModel.Resident" Multiplicity="1" />
+          <End Role="Ticket" Type="AMPortal_DBModel.Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resident">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="Ticket">
+              <PropertyRef Name="Resident_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WaitList_Resident">
+          <End Role="Resident" Type="AMPortal_DBModel.Resident" Multiplicity="1" />
+          <End Role="WaitList" Type="AMPortal_DBModel.WaitList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resident">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="WaitList">
+              <PropertyRef Name="Resident_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="aspnet_UsersInRoles">
+          <End Role="aspnet_Roles" Type="AMPortal_DBModel.aspnet_Roles" Multiplicity="*" />
+          <End Role="aspnet_Users" Type="AMPortal_DBModel.aspnet_Users" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AMPortal_DBModelStoreContainer" CdmEntityContainer="AMPortal_Entities">
+          <EntitySetMapping Name="AccessCards">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.AccessCard">
+              <MappingFragment StoreEntitySet="AccessCard">
+                <ScalarProperty Name="AC_ID" ColumnName="AC_ID" />
+                <ScalarProperty Name="Apartment_ID" ColumnName="Apartment_ID" />
+                <ScalarProperty Name="Resident_ID" ColumnName="Resident_ID" />
+                <ScalarProperty Name="AccessCard_No" ColumnName="AccessCard.No" />
+                <ScalarProperty Name="Issued" ColumnName="Issued" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apartments">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.Apartment">
+              <MappingFragment StoreEntitySet="Apartment">
+                <ScalarProperty Name="A_ID" ColumnName="A_ID" />
+                <ScalarProperty Name="Complex_ID" ColumnName="Complex_ID" />
+                <ScalarProperty Name="Apartment_No" ColumnName="Apartment.No" />
+                <ScalarProperty Name="Unit_No" ColumnName="Unit.No" />
+                <ScalarProperty Name="No_Residents" ColumnName="No.Residents" />
+                <ScalarProperty Name="Services" ColumnName="Services" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Applications">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_Applications">
+              <MappingFragment StoreEntitySet="aspnet_Applications">
+                <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+                <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Membership">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_Membership">
+              <MappingFragment StoreEntitySet="aspnet_Membership">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+                <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+                <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+                <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+                <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Paths">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_Paths">
+              <MappingFragment StoreEntitySet="aspnet_Paths">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="PathId" ColumnName="PathId" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_PersonalizationAllUsers">
+              <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+                <ScalarProperty Name="PathId" ColumnName="PathId" />
+                <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_PersonalizationPerUser">
+              <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PathId" ColumnName="PathId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Profile">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_Profile">
+              <MappingFragment StoreEntitySet="aspnet_Profile">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+                <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+                <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Roles">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_Roles">
+              <MappingFragment StoreEntitySet="aspnet_Roles">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_SchemaVersions">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_SchemaVersions">
+              <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+                <ScalarProperty Name="Feature" ColumnName="Feature" />
+                <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+                <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_Users">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_Users">
+              <MappingFragment StoreEntitySet="aspnet_Users">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+                <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+                <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="aspnet_WebEvent_Events">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.aspnet_WebEvent_Events">
+              <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+                <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+                <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+                <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+                <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Complexes">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.Complex">
+              <MappingFragment StoreEntitySet="Complex">
+                <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Maintenance" ColumnName="Maintenance" />
+                <ScalarProperty Name="Hotline" ColumnName="Hotline" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inventories">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.Inventory">
+              <MappingFragment StoreEntitySet="Inventory">
+                <ScalarProperty Name="I_ID" ColumnName="I_ID" />
+                <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParkingPasses">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.ParkingPass">
+              <MappingFragment StoreEntitySet="ParkingPass">
+                <ScalarProperty Name="PP_ID" ColumnName="PP_ID" />
+                <ScalarProperty Name="Apartment_ID" ColumnName="Apartment_ID" />
+                <ScalarProperty Name="Resident_ID" ColumnName="Resident_ID" />
+                <ScalarProperty Name="Tag_No" ColumnName="Tag.No" />
+                <ScalarProperty Name="Issued" ColumnName="Issued" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Residents">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.Resident">
+              <MappingFragment StoreEntitySet="Resident">
+                <ScalarProperty Name="R_ID" ColumnName="R_ID" />
+                <ScalarProperty Name="U_ID" ColumnName="U_ID" />
+                <ScalarProperty Name="Apartment_ID" ColumnName="Apartment_ID" />
+                <ScalarProperty Name="Room_ID" ColumnName="Room_ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MoveInDate" ColumnName="MoveInDate" />
+                <ScalarProperty Name="MoveOutDate" ColumnName="MoveOutDate" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rooms">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.Room">
+              <MappingFragment StoreEntitySet="Room">
+                <ScalarProperty Name="RM_ID" ColumnName="RM_ID" />
+                <ScalarProperty Name="Apartment_ID" ColumnName="Apartment_ID" />
+                <ScalarProperty Name="Room_No" ColumnName="Room.No" />
+                <ScalarProperty Name="Resident_A" ColumnName="Resident A" />
+                <ScalarProperty Name="Resident_B" ColumnName="Resident B" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tickets">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.Ticket">
+              <MappingFragment StoreEntitySet="Ticket">
+                <ScalarProperty Name="T_ID" ColumnName="T_ID" />
+                <ScalarProperty Name="Resident_ID" ColumnName="Resident_ID" />
+                <ScalarProperty Name="Handler_ID" ColumnName="Handler_ID" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Issue" ColumnName="Issue" />
+                <ScalarProperty Name="Replies" ColumnName="Replies" />
+                <ScalarProperty Name="Updates" ColumnName="Updates" />
+                <ScalarProperty Name="Opened" ColumnName="Opened" />
+                <ScalarProperty Name="Closed" ColumnName="Closed" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.Vendor">
+              <MappingFragment StoreEntitySet="Vendor">
+                <ScalarProperty Name="V_ID" ColumnName="V_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WaitLists">
+            <EntityTypeMapping TypeName="AMPortal_DBModel.WaitList">
+              <MappingFragment StoreEntitySet="WaitList">
+                <ScalarProperty Name="WL_ID" ColumnName="WL_ID" />
+                <ScalarProperty Name="Resident_ID" ColumnName="Resident_ID" />
+                <ScalarProperty Name="Application_Date" ColumnName="Application Date" />
+                <ScalarProperty Name="ParkingPass_Issued" ColumnName="ParkingPass_Issued" />
+                <ScalarProperty Name="ParkingPass_ID" ColumnName="ParkingPass_ID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="AMPortal_DBModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+            <EndProperty Name="aspnet_Roles">
+              <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="aspnet_Users">
+              <ScalarProperty Name="UserId" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AMPortal_Model">
+        <EntityTypeShape EntityType="AMPortal_DBModel.AccessCard" Width="1.5" PointX="15.75" PointY="17.125" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.Apartment" Width="1.5" PointX="11.25" PointY="12.125" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="13.375" Height="2.5571907552083353" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_Membership" Width="1.5" PointX="6" PointY="14.875" Height="5.4417122395833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_Paths" Width="1.5" PointX="3" PointY="11.875" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="5.25" PointY="12.125" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="5.25" PointY="8.875" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_Profile" Width="1.5" PointX="10.5" PointY="17.375" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_Roles" Width="1.5" PointX="3" PointY="21.25" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_SchemaVersions" Width="1.5" PointX="0.75" PointY="4.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_Users" Width="1.5" PointX="8.25" PointY="16.625" Height="3.7109993489583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.aspnet_WebEvent_Events" Width="1.5" PointX="5.75" PointY="0.75" Height="3.9033007812500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.Complex" Width="1.5" PointX="9" PointY="12.375" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.Inventory" Width="1.5" PointX="3" PointY="1" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.ParkingPass" Width="1.5" PointX="18.75" PointY="17.125" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.Resident" Width="1.5" PointX="13.5" PointY="16.25" Height="4.4802050781250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.Room" Width="1.5" PointX="11.25" PointY="21.25" Height="2.5571907552083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.Ticket" Width="1.5" PointX="15.75" PointY="12.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.Vendor" Width="1.5" PointX="0.75" PointY="1.25" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMPortal_DBModel.WaitList" Width="1.5" PointX="21" PointY="17.125" Height="2.5571907552083388" IsExpanded="true" />
+        <AssociationConnector Association="AMPortal_DBModel.FK_AccessCard_Apartment" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.75" PointY="15.451396484375" />
+          <ConnectorPoint PointX="13.125" PointY="15.826396484375" />
+          <ConnectorPoint PointX="14.166666666666666" PointY="15.826396484375" />
+          <ConnectorPoint PointX="14.333333333333334" PointY="15.826396484375" />
+          <ConnectorPoint PointX="15.375" PointY="15.826396484375" />
+          <ConnectorPoint PointX="15.375" PointY="16.75" />
+          <ConnectorPoint PointX="15.75" PointY="17.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_AccessCard_Resident" ManuallyRouted="false">
+          <ConnectorPoint PointX="15" PointY="18.434847877604167" />
+          <ConnectorPoint PointX="15.75" PointY="18.434847877604167" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_Apartment_Complex" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="13.749746093750002" />
+          <ConnectorPoint PointX="11.25" PointY="13.749746093750002" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_ParkingPass_Apartment" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.75" PointY="12.40625" />
+          <ConnectorPoint PointX="19.5" PointY="12.40625" />
+          <ConnectorPoint PointX="19.5" PointY="17.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_Resident_Apartment" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.3749975" PointY="15.451396484375" />
+          <ConnectorPoint PointX="12.3749975" PointY="20.170146484375" />
+          <ConnectorPoint PointX="13.5" PointY="20.170146484375" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_Room_Apartment" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.15624875" PointY="15.451396484375" />
+          <ConnectorPoint PointX="12.15624875" PointY="21.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Me__Appli__09A971A2" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.403595377604168" />
+          <ConnectorPoint PointX="6" PointY="15.403595377604168" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Pa__Appli__06CD04F7" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.807444661458334" />
+          <ConnectorPoint PointX="3" PointY="13.807444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Ro__Appli__07C12930" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="15.932190755208335" />
+          <ConnectorPoint PointX="1.5" PointY="22.432444661458334" />
+          <ConnectorPoint PointX="3" PointY="22.432444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Us__Appli__04E4BC85" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062519999999998" PointY="15.932190755208335" />
+          <ConnectorPoint PointX="1.9062519999999998" PointY="20.566712239583332" />
+          <ConnectorPoint PointX="7.875" PointY="20.566712239583332" />
+          <ConnectorPoint PointX="7.875" PointY="18.480499674479166" />
+          <ConnectorPoint PointX="8.25" PointY="18.480499674479166" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Me__UserI__0A9D95DB" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="17.490249837239581" />
+          <ConnectorPoint PointX="7.5" PointY="17.490249837239581" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Pe__PathI__0B91BA14" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.018992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="13.018992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Pe__PathI__0C85DE4D" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="11.875" />
+          <ConnectorPoint PointX="3.75" PointY="10.057444661458334" />
+          <ConnectorPoint PointX="5.25" PointY="10.057444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Pe__UserI__0D7A0286" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.59375" PointY="16.625" />
+          <ConnectorPoint PointX="8.59375" PointY="10.057444661458334" />
+          <ConnectorPoint PointX="6.75" PointY="10.057444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK__aspnet_Pr__UserI__0F624AF8" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="18.461293945312498" />
+          <ConnectorPoint PointX="10.5" PointY="18.461293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_Resident_aspnet_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="16.96875" />
+          <ConnectorPoint PointX="12.072915416666666" PointY="16.96875" />
+          <ConnectorPoint PointX="12.239582083333334" PointY="16.96875" />
+          <ConnectorPoint PointX="12.291664166666665" PointY="16.96875" />
+          <ConnectorPoint PointX="12.458330833333333" PointY="16.96875" />
+          <ConnectorPoint PointX="13.5" PointY="16.96875" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_Ticket_aspnet_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.7968775" PointY="16.625" />
+          <ConnectorPoint PointX="8.7968775" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="12.072915416666666" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="12.239582083333334" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="12.291664166666665" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="12.458330833333333" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="14.166666666666666" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="14.333333333333334" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="15.291666666666666" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="15.458333333333334" PointY="16.006948242187498" />
+          <ConnectorPoint PointX="15.75" PointY="16.006948242187498" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_Inventory_Inventory" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.3362939453125016" />
+          <ConnectorPoint PointX="3" PointY="2.3362939453125016" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_ParkingPass_Resident" ManuallyRouted="false">
+          <ConnectorPoint PointX="15" PointY="19.809591471354167" />
+          <ConnectorPoint PointX="18.75" PointY="19.809591471354167" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_WaitList_ParkingPass" ManuallyRouted="false">
+          <ConnectorPoint PointX="20.25" PointY="18.403595377604169" />
+          <ConnectorPoint PointX="21" PointY="18.403595377604169" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_Resident_Room" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.75" PointY="22.528595377604169" />
+          <ConnectorPoint PointX="14.25" PointY="22.528595377604169" />
+          <ConnectorPoint PointX="14.25" PointY="20.730205078125003" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_Ticket_Resident" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.25" PointY="16.25" />
+          <ConnectorPoint PointX="14.25" PointY="14.2881982421875" />
+          <ConnectorPoint PointX="15.75" PointY="14.2881982421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.FK_WaitList_Resident" ManuallyRouted="false">
+          <ConnectorPoint PointX="15" PointY="20.333598632812503" />
+          <ConnectorPoint PointX="21.75" PointY="20.333598632812503" />
+          <ConnectorPoint PointX="21.75" PointY="19.682190755208339" />
+        </AssociationConnector>
+        <AssociationConnector Association="AMPortal_DBModel.aspnet_UsersInRoles" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="22.432444661458334" />
+          <ConnectorPoint PointX="9" PointY="22.432444661458334" />
+          <ConnectorPoint PointX="9" PointY="20.335999348958332" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
