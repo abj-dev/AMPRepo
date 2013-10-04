@@ -45,6 +45,7 @@ namespace Apartment.Controllers
 
                     Membership.CreateUser(model.UserName,model.Password);
                     Roles.AddUserToRole(model.UserName, model.Role);
+                    //Profile.Department = model.Department;
                     return View("createUser");
 
                     
