@@ -149,15 +149,7 @@ namespace Apartment.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Manage(LocalPasswordModel model)
         {
-            bool hasLocalAccount = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
-            ViewBag.HasLocalPassword = hasLocalAccount;
-            ViewBag.ReturnUrl = Url.Action("Manage");
-            if (hasLocalAccount)
-            {
-                if (ModelState.IsValid)
-                {
-                    // ChangePassword will throw an exception rather than return false in certain failure scenarios.
-                    bool changePasswordSucceeded;
+                    //all this does is allow user to change password other info   
                     try
                     {
                         MembershipUser user = Membership.GetUser(User.Identity.Name);
@@ -167,49 +159,23 @@ namespace Apartment.Controllers
 
                         user.ChangePassword(model.OldPassword, model.NewPassword);
                         //Implement Email Intimation later
-                        changePasswordSucceeded = WebSecurity.ChangePassword(User.Identity.Name, model.OldPassword, model.NewPassword);
+                        //changePasswordSucceeded = WebSecurity.ChangePassword(User.Identity.Name, model.OldPassword, model.NewPassword);
                     }
                     catch (Exception)
                     {
-                        changePasswordSucceeded = false;
+                        //changePasswordSucceeded = false;
                     }
 
-                    if (changePasswordSucceeded)
-                    {
+                    
                         return RedirectToAction("Manage", new { Message = ManageMessageId.ChangePasswordSuccess });
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "The current password is incorrect or the new password is invalid.");
-                    }
-                }
-            }
-            else
-            {
-                // User does not have a local password so remove any validation errors caused by a missing
-                // OldPassword field
-                ModelState state = ModelState["OldPassword"];
-                if (state != null)
-                {
-                    state.Errors.Clear();
-                }
-
-                if (ModelState.IsValid)
-                {
-                    try
-                    {
-                        WebSecurity.CreateAccount(User.Identity.Name, model.NewPassword);
-                        return RedirectToAction("Manage", new { Message = ManageMessageId.SetPasswordSuccess });
-                    }
-                    catch (Exception e)
-                    {
-                        ModelState.AddModelError("", e);
-                    }
-                }
-            }
+                    
+                
+            
+            
+            
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            //return View(model);
         }
 
         //

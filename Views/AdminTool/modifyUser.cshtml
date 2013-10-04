@@ -1,10 +1,10 @@
 ﻿@model Apartment.Models.RegisterModel
 
 @{
-    ViewBag.Title = "createUser";
+    ViewBag.Title = "modifyUser";
 }
 
-<h2>createUser</h2>
+<h2>modifyUser</h2>
 <nav>
                         <ul id="menu">
                            
@@ -13,18 +13,44 @@
                             <li>@Html.ActionLink("ModifyUser", "modifyUser", "AdminTool")</li>
                         </ul>
                     </nav>
-@using (Html.BeginForm()) {
+                    @using (Html.BeginForm())
+{
     @Html.ValidationSummary(true)
-
-    <fieldset>
+                    <fieldset>
         <legend>RegisterModel</legend>
+  @{
+            
+    var db = Database.Open("ApartmentsConnection");
+
+    var item =  db.Query("SELECT UserName FROM aspnet_Users");
+
+    List<SelectListItem> xValues = new List<SelectListItem>() 
+                                   {  new SelectListItem 
+                                          { Selected = true,
+                                            Text = "Select...",
+                                            Value = "Select...",
+                                          }
+                                   };
+    foreach(var i in item)
+    {
+
+        xValues.Add(new SelectListItem
+        {
+            Selected = false,
+            Text = i.UserName,
+            Value = i.UserName
+        }
+                 );
+    }
+        
+}
 
         <div class="editor-label">
             @Html.LabelFor(model => model.UserName)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.UserName)
-            @Html.ValidationMessageFor(model => model.UserName)
+            @Html.DropDownListFor(model => model.UserName, xValues);
+            
         </div>
 
         <div class="editor-label">
@@ -49,18 +75,18 @@
 
         @{
             
-    var db = Database.Open("ApartmentsConnection");
+    //var db = Database.Open("ApartmentsConnection");
 
-    var item =  db.Query("SELECT RoleName FROM aspnet_Roles");
+    item = db.Query("SELECT RoleName FROM aspnet_Roles");
 
-    List<SelectListItem> xValues = new List<SelectListItem>() 
+    xValues = new List<SelectListItem>() 
                                    {  new SelectListItem 
                                           { Selected = true,
                                             Text = "Select...",
                                             Value = "Select...",
                                           }
                                    };
-    foreach(var i in item)
+    foreach (var i in item)
     {
 
         xValues.Add(new SelectListItem

@@ -73,8 +73,7 @@ namespace Apartment.Controllers
         {
 
 
-            if (ModelState.IsValid)
-            {
+            
                 //FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
                 try
                 {
@@ -82,7 +81,7 @@ namespace Apartment.Controllers
                     Roles.RemoveUserFromRoles(model.UserName,userRoles);
                     Membership.DeleteUser(model.UserName);
                     
-                    return View("createUser");
+                    return View("deleteUser");
 
 
                 }
@@ -90,14 +89,56 @@ namespace Apartment.Controllers
                 {
                     ModelState.AddModelError("", ErrorCodeToString(e.StatusCode));
                 }
+            
+
+            // If we got this far, something failed, redisplay form
+            return View("deleteUser");
+
+        }//end delete user
+        [Authorize(Roles = "Admin")]
+        public ActionResult modifyUser()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Account/Manage
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public ActionResult modifyUser(RegisterModel model)
+        {
+            //all this does is allow user to change password other info   
+            try
+            {
+                string user = model.UserName;
+                var userRoles = Roles.GetRolesForUser(user);
+                MembershipUser userM = Membership.GetUser(user);
+                string tempPassword = userM.ResetPassword();
+
+
+                userM.ChangePassword(tempPassword, model.ConfirmPassword);
+                Roles.RemoveUserFromRoles(user, userRoles);
+                Roles.AddUserToRole(user, model.Role);
+
+                //Implement Email Intimation later
+                //changePasswordSucceeded = WebSecurity.ChangePassword(User.Identity.Name, model.OldPassword, model.NewPassword);
+            }
+            catch (Exception)
+            {
+                //changePasswordSucceeded = false;
             }
 
 
+            return View("modifyUser");
+
+
+
+
+
             // If we got this far, something failed, redisplay form
-            return View("createUser");
-
-        }//end create user
-
+            //return View(model);
+        }//manage user
 
         private static string ErrorCodeToString(MembershipCreateStatus createStatus)
         {

@@ -5,47 +5,59 @@
 }
 
 <h2>deleteUser</h2>
-
+<nav>
+                        <ul id="menu">
+                           
+                            <li>@Html.ActionLink("CreateUser", "createUser", "AdminTool")</li>
+                            <li>@Html.ActionLink("DeleteUser", "deleteUser", "AdminTool")</li>
+                            <li>@Html.ActionLink("ModifyUser", "modifyUser", "AdminTool")</li>
+                        </ul>
+                    </nav>
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>RegisterModel</legend>
 
+
+            @{
+            
+    var db = Database.Open("ApartmentsConnection");
+
+    var item =  db.Query("SELECT UserName FROM aspnet_Users");
+
+    List<SelectListItem> xValues = new List<SelectListItem>() 
+                                   {  new SelectListItem 
+                                          { Selected = true,
+                                            Text = "Select...",
+                                            Value = "Select...",
+                                          }
+                                   };
+    foreach(var i in item)
+    {
+
+        xValues.Add(new SelectListItem
+        {
+            Selected = false,
+            Text = i.UserName,
+            Value = i.UserName
+        }
+                 );
+    }
+        
+}
+
         <div class="editor-label">
             @Html.LabelFor(model => model.UserName)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.UserName)
-            @Html.ValidationMessageFor(model => model.UserName)
+            @Html.DropDownListFor(model => model.UserName, xValues);
+            
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Password)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Password)
-            @Html.ValidationMessageFor(model => model.Password)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ConfirmPassword)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ConfirmPassword)
-            @Html.ValidationMessageFor(model => model.ConfirmPassword)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Role)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Role)
-            @Html.ValidationMessageFor(model => model.Role)
-        </div>
-
+        
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Delete" />
         </p>
     </fieldset>
 }
